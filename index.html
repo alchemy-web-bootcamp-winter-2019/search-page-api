@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../main.css">
+    <title>Movie Finder</title>
+</head>
+<body>
+
+    <header>
+        <h1>Movie Finder</h1>
+    </header>
+
+    <main>
+        <section id="search-form-container">
+            <form id="search-form">
+                <input type="text" name="search" id="search-input" placeholder="Find a Movie">
+                <button id="search-button">Search</button>
+            </form>
+        </section>
+
+        <section id="pagination-container">
+            <button id="previous-button">&lt; Previous</button>
+            <p id="page-range">Page <span id="current-page">1</span> of <span id="total-pages">300</span></p>
+            <button id="next-button">Next &gt;</button>
+        </section>
+
+        <section id="movie-container">
+            <div class="movie-div">
+                <h3>Title</h3>
+                <img src="" alt="" class="movie-thumbnail">
+                <p>2008</p>
+            </div>
+        </section>
+    </main>
+<script type="module" src="./src/main.js">  </script>
+</body>
+</html>
