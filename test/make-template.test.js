@@ -6,7 +6,7 @@ function makeTemplate(quote) {
     const html = /*html*/`
     <li>
         <p>${quote.value}</p>
-        <h2>${quote.appeared_at}</h2>
+        <h2>${convertDate(quote.appeared_at)}</h2>
     </li>
     `;
     const template = document.createElement('template');
