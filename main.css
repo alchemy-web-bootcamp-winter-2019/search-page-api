@@ -1,0 +1,12 @@
+#giphy-list {
+    display: flex;
+    list-style-type: none;
+    flex-wrap: wrap;
+    width: 800px;
+}
+
+li {
+    padding: 5px;
+    border: 1px solid black;
+    margin: 5px;
+}
