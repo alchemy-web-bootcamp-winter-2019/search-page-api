@@ -1,20 +1,8 @@
+import { createCatTemplateFunction } from '../src/create-cat-component.js';
+
 const test = QUnit.test;
 
 QUnit.module('CREATE TEMPLATE TEST');
-
-function createCatTemplateFunction(catObject) {
-    const html = `
-        <li>
-            <h2>${catObject.title}</h2>
-            <img src="${catObject.img}">
-            <h2>Breed: ${catObject.breed}</h2>
-            <p>${catObject.description}</p>
-        </li>
-    `;
-    const template = document.createElement('template');
-    template.innerHTML = html;
-    return template.content;
-}
 
 test('create cat template function', assert => {
     // arrange
