@@ -1,9 +1,7 @@
-import { searchToHash } from '../src/search-component.js';
+import { searchToHash, readFromQuery } from '../src/query-functions.js';
 const test = QUnit.test;
 
 QUnit.module('Testing Search Component');
-
-
 
 test('returns url hash that matches search when existing is empty', assert => {
     //Arrange
@@ -26,3 +24,18 @@ test('returns url hash that matches search when existing has content', assert =>
     //Assert
     assert.equal(result, expected);
 }); 
+
+
+
+test('read search options from query', assert => {
+    //Arrange
+    const expected = {
+        searchTerm: 'ryan gosling',
+        limit: 5
+    };
+    const query = 'limit=5&q=ryan+gosling';
+    //Act
+    const result = readFromQuery(query);
+    //Assert
+    assert.deepEqual(result, expected);
+});
