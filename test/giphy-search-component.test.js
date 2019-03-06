@@ -1,14 +1,9 @@
+import { searchToHash } from '../src/search-component.js';
 const test = QUnit.test;
 
 QUnit.module('Testing Search Component');
 
-function searchToHash(existing, searchTerm) {
-    const searchParams = new URLSearchParams(existing);
-    searchParams.set('limit', 5);
-    searchParams.set('q', searchTerm);
-    
-    return searchParams.toString();
-}
+
 
 test('returns url hash that matches search when existing is empty', assert => {
     //Arrange
