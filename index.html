@@ -10,14 +10,17 @@
 </head>
 <body>
     <header>
-        <h1>Simplified Ravelry Search</h1>
+        <img src="../assets/yarn.gif" alt="yarn with needles" id="header-img">
+        <section id="header-block"><h1>Simplified Ravelry Search</h1>
+        <form id="search">
+                <label for="pattern-search">Pattern Search: </label>
+                <input type="text" name="pattern-search" id="pattern-search">
+                <button id="pattern-search-button">go!</button>
+        </form>
+        </section>
     </header>
     <main>
-        <form id="search">
-            <label for="pattern-search">Pattern Search: </label>
-            <input type="text" name="pattern-search" id="pattern-search">
-            <button id="pattern-search-button">go!</button>
-        </form>
+        
         <ul id="pattern-display">
             <li>
                 <a href="https://www.ravelry.com/patterns/library/clean-lines-2"><h2>Clean Lines</h2>
