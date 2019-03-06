@@ -38,13 +38,35 @@ function writePageToQuery(existingQuery, page) {
     return searchParams;
 }
 
-test ('Write page to existing query', assert => {
+test('Write page to existing query', assert => {
     // arrange
     const existingQuery = 'name=goblin&page=1';
     const page = 2;
-    const expected = 'name=goblin&page=2' 
+    const expected = 'name=goblin&page=2'; 
     // act
     const result = writePageToQuery(existingQuery, page);
     // assert
     assert.equal(result, expected);
+});
+
+function readFromQuery(existingQuery) {
+    const searchParams = new URLSearchParams(existingQuery);
+    const searchOptions = {
+        name: searchParams.get('name'),
+        page: Number(searchParams.get('page')) 
+    };
+    return searchOptions;
+}
+
+test('Make search options from existing query', assert => {
+    // arrange
+    const existingQuery = 'name=orc&page=2';
+    const expected = {
+        name: 'orc',
+        page: 2
+    };
+    // act
+    const result = readFromQuery(existingQuery);
+    // assert
+    assert.deepEqual(result, expected);
 });
