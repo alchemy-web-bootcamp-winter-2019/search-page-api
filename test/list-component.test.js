@@ -21,3 +21,27 @@ test('create card template', assert => {
     assert.htmlEqual(result, expected);
 
 });
+
+test('If there is no image URL, use placeholder', assert => {
+    // arrange
+    const card = {
+        name: 'Goblin Spymaster',
+        manaCost: '{2}{R}',
+        text: `First strike\nAt the beginning of each opponent's end step, that player creates a 1/1 red Goblin creature token with \"Creatures you control attack each combat if able.\"`,
+        power: 2,
+        toughness: 1
+    };
+    const expected = /*html*/`
+        <li>
+            <h2>Goblin Spymaster</h2>
+            <p>Mana Cost: {2}{R}</p> 
+            <img src="./assets/card-back.jpg" alt="Image of Goblin Spymaster">
+            <p>Card text: First strike\nAt the beginning of each opponent's end step, that player creates a 1/1 red Goblin creature token with \"Creatures you control attack each combat if able.\""</p>
+            <p class="pt">P/T 2/1</p>
+        </li>
+    `;
+    // act
+        const result = makeCardTemplate(card);
+    // assert
+        assert.htmlEqual(result, expected);
+});
