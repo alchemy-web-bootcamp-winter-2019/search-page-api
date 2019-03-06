@@ -1,13 +1,8 @@
+import { writeSearchToQuery, writePageToQuery, readFromQuery} from '../src/hash-query.js';
+
 const test = QUnit.test;
 
 QUnit.module('Make hash from search');
-
-function writeSearchToQuery(existingQuery, search) {
-    const searchParams = new URLSearchParams(existingQuery);
-    searchParams.set('name', search);
-    searchParams.set('page', 1);
-    return searchParams;
-}
 
 test('Make hash from search term', assert => {
     // arrange
@@ -32,12 +27,6 @@ test('Overwrite existing query with new search', assert => {
     assert.equal(result, expected);
 });
 
-function writePageToQuery(existingQuery, page) {
-    const searchParams = new URLSearchParams(existingQuery);
-    searchParams.set('page', page);
-    return searchParams;
-}
-
 test('Write page to existing query', assert => {
     // arrange
     const existingQuery = 'name=goblin&page=1';
@@ -48,15 +37,6 @@ test('Write page to existing query', assert => {
     // assert
     assert.equal(result, expected);
 });
-
-function readFromQuery(existingQuery) {
-    const searchParams = new URLSearchParams(existingQuery);
-    const searchOptions = {
-        name: searchParams.get('name'),
-        page: Number(searchParams.get('page')) 
-    };
-    return searchOptions;
-}
 
 test('Make search options from existing query', assert => {
     // arrange
