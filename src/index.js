@@ -1,5 +1,10 @@
-import catsObject from '../data/data.js';
-
 import loadCats from './create-cat-component.js';
 
-loadCats(catsObject);
+const url = 'https://api.thecatapi.com/v1/images/search?limit=15&page=0&order=Desc';
+
+fetch(url)
+    .then(response => response.json())
+    .then(body => {
+        console.log('fetch body', body);
+        loadCats(body);
+    });

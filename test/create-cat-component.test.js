@@ -7,18 +7,13 @@ QUnit.module('CREATE TEMPLATE TEST');
 test('create cat template function', assert => {
     // arrange
     const catObject = {
-        title: 'All Of Our Cats',
-        img: 'https://images.mentalfloss.com/sites/default/files/styles/mf_image_16x9/public/549585-istock-909106260.jpg?itok=ds7LqH1N&resize=1100x1100',
-        breed: 'Breed',
-        description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius consequatur voluptates corporis odio architecto excepturi nesciunt autem. Nulla quo nam sint adipisci cum fuga doloremque voluptatum fugiat ipsa! Minus, eligendi!'
+        url: 'https://images.mentalfloss.com/sites/default/files/styles/mf_image_16x9/public/549585-istock-909106260.jpg?itok=ds7LqH1N&resize=1100x1100',
     };
 
     const expected = `
         <li>
-            <h2>All Of Our Cats</h2>
+            <h2>Random Cat</h2>
             <img src="https://images.mentalfloss.com/sites/default/files/styles/mf_image_16x9/public/549585-istock-909106260.jpg?itok=ds7LqH1N&amp;resize=1100x1100">
-            <h2>Breed: Breed</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius consequatur voluptates corporis odio architecto excepturi nesciunt autem. Nulla quo nam sint adipisci cum fuga doloremque voluptatum fugiat ipsa! Minus, eligendi!</p>
         </li>
     `;
     // act
