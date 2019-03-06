@@ -19,3 +19,15 @@ test('Make hash from search term', assert => {
     // assert
     assert.equal(result, expected);
 });
+
+test('Overwrite existing query with new search', assert => {
+    // arrange
+    const search = 'cleric';
+    const existingQuery = 'name=goblin&page=3';
+    const expected = 'name=cleric&page=1';
+    // act
+    const result = writeSearchToQuery(existingQuery, search);
+
+    // assert
+    assert.equal(result, expected);
+})
