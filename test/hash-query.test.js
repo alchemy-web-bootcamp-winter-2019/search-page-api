@@ -30,4 +30,21 @@ test('Overwrite existing query with new search', assert => {
 
     // assert
     assert.equal(result, expected);
-})
+});
+
+function writePageToQuery(existingQuery, page) {
+    const searchParams = new URLSearchParams(existingQuery);
+    searchParams.set('page', page);
+    return searchParams;
+}
+
+test ('Write page to existing query', assert => {
+    // arrange
+    const existingQuery = 'name=goblin&page=1';
+    const page = 2;
+    const expected = 'name=goblin&page=2' 
+    // act
+    const result = writePageToQuery(existingQuery, page);
+    // assert
+    assert.equal(result, expected);
+});
