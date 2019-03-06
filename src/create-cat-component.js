@@ -1,3 +1,5 @@
+const catGalleryNode = document.getElementById('cat-gallery');
+
 export function createCatTemplateFunction(catObject) {
     const html = `
         <li>
@@ -10,4 +12,11 @@ export function createCatTemplateFunction(catObject) {
     const template = document.createElement('template');
     template.innerHTML = html;
     return template.content;
+}
+
+export default function loadCats(catsObject) {
+    catsObject.forEach(catObject => {
+        const dom = createCatTemplateFunction(catObject);
+        catGalleryNode.appendChild(dom);
+    });
 }
