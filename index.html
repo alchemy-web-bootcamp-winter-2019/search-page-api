@@ -4,35 +4,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css?family=Quicksand:400,700" rel="stylesheet">
+    <link rel="stylesheet" type ="text/css" href="main.css">
+    <title>Simplified Ravelry Search</title>
 </head>
 <body>
     <header>
         <h1>Simplified Ravelry Search</h1>
     </header>
     <main>
-        <ul>
+        <form id="search">
+            <label for="pattern-search">Pattern Search: </label>
+            <input type="text" name="pattern-search" id="pattern-search">
+            <button id="pattern-search-button">go!</button>
+        </form>
+        <ul id="pattern-display">
             <li>
-                <h2>Clean Lines</h2>
-                <img src="https://images4-b.ravelrycache.com/uploads/stitchnerd/611130017/stitchnerd-023_medium.jpg" alt="">
-                <p>Designer: Susan Ashcroft</p>
+                <a href="https://www.ravelry.com/patterns/library/clean-lines-2"><h2>Clean Lines</h2>
+                <img src="https://images4-b.ravelrycache.com/uploads/stitchnerd/611130017/stitchnerd-023_medium.jpg" alt=""></a>
+                <p>Designer: <a href="http://www.ravelry.com/stores/stitchnerd-designs">Susan Ashcroft</a></p>
                 <p>Ravelry Username: stitchnerd</p>
             </li>
             <li>
-                    <h2>Clean Lines</h2>
-                    <img src="https://images4-b.ravelrycache.com/uploads/stitchnerd/611130017/stitchnerd-023_medium.jpg" alt="">
-                    <p>Designer: Susan Ashcroft</p>
-                    <p>Ravelry Username: stitchnerd</p>
-                </li>
-                <li>
-                        <h2>Clean Lines</h2>
-                        <img src="https://images4-b.ravelrycache.com/uploads/stitchnerd/611130017/stitchnerd-023_medium.jpg" alt="">
-                        <p>Designer: Susan Ashcroft</p>
-                        <p>Ravelry Username: stitchnerd</p>
-                    </li>
+                <a href="https://www.ravelry.com/patterns/library/audrey-30"><h2>Audrey</h2>
+                <img src="https://images4-b.ravelrycache.com/uploads/diemercerie-muc/471198475/_PWS1479_medium.jpg" alt=""></a>
+                <p>Designer: <a href="https://www.ravelry.com/stores/die-mercerie-2">Die Mercerie</a></p>
+                <p>Ravelry Username: diemercerie-muc</p>
+            </li>
+            <li>
+                <a href="https://www.ravelry.com/patterns/library/get-together-wrap"><h2>Get Together Wrap</h2>
+                <img src="https://images4-b.ravelrycache.com/uploads/jojilocat/611258711/WN7A3590_medium.jpg" alt=""></a>
+                <p>Designer: <a href="http://www.ravelry.com/stores/j-o-j-i">Joji Locatelli</a></p>
+                <p>Ravelry Username: ojilocat</p>
+            </li>
         </ul>
     </main>
     <footer></footer>
-    
+<script type="module" src="src/index.js"></script>
 </body>
 </html>
