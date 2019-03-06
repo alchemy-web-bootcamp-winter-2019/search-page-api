@@ -3,22 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="../main.css">
-    <title>Movie Finder</title>
+    <link rel="stylesheet" type="text/css" href="../style.css">
+    <title>Rick and Morty</title>
 </head>
 <body>
 
     <header>
-        <h1>Movie Finder</h1>
-    </header>
-
-    <main>
+        <a href="index.html"><h1>Rick and Morty</h1></a>
         <section id="search-form-container">
             <form id="search-form">
-                <input type="text" name="search" id="search-input" placeholder="Find a Movie">
+                <input type="text" name="search" id="search-input" placeholder="Search by Name">
                 <button id="search-button">Search</button>
             </form>
         </section>
+    </header>
+
+    <main>
 
         <section id="pagination-container">
             <button id="previous-button">&lt; Previous</button>
@@ -26,11 +26,21 @@
             <button id="next-button">Next &gt;</button>
         </section>
 
-        <section id="movie-container">
-            <div class="movie-div">
-                <h3>Title</h3>
-                <img src="" alt="" class="movie-thumbnail">
-                <p>2008</p>
+        <section id="character-container">
+            <div class="character-div">
+                <h3>Toxic Rick</h3>
+                <img src="https://rickandmortyapi.com/api/character/avatar/361.jpeg" alt="Toxic Rick" class="character-thumbnail">
+                <p>Species: Humanoid</p>
+            </div>
+            <div class="character-div">
+                <h3>Toxic Rick</h3>
+                <img src="https://rickandmortyapi.com/api/character/avatar/361.jpeg" alt="Toxic Rick" class="character-thumbnail">
+                <p>Species: Humanoid</p>
+            </div>
+            <div class="character-div">
+                <h3>Toxic Rick</h3>
+                <img src="https://rickandmortyapi.com/api/character/avatar/361.jpeg" alt="Toxic Rick" class="character-thumbnail">
+                <p>Species: Humanoid</p>
             </div>
         </section>
     </main>
