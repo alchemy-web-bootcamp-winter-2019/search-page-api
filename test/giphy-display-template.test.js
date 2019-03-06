@@ -1,16 +1,9 @@
+import { makeGiphyTemplate } from '../src/giphy-display-component.js';
 const test = QUnit.test;
 
 QUnit.module('Testing display template');
 
-function makeGiphyTemplate(giphyObject) {
-    const html = /*html*/ `<li>
-    <img src="${giphyObject.src}" alt="ryan gosling gif">
-</li>
-    `;
-    const template = document.createElement('template');
-    template.innerHTML = html;
-    return template.content;
-}
+
 
 test('create LI template for gifs', assert => {
     //Arrange
