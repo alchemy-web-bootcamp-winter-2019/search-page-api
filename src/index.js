@@ -1,0 +1,1 @@
+fetch('https://rickandmortyapi.com/api/character/1').then(response => response.json()).then(body => console.log(body));
