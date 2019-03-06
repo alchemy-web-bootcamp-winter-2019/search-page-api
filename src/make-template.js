@@ -17,3 +17,18 @@ export function convertDate(utcCode){
     const niceDate = `${months[date.getMonth()]} ${date.getDate()}, ${date.getFullYear()}`;
     return niceDate;
 }
+
+const quoteListUl = document.getElementById('quote-list');
+export default function loadQuotes(quoteList){
+    clearRows();
+    quoteList.forEach(quote => {
+        const dom = makeTemplate(quote);
+        quoteListUl.appendChild(dom);
+    });
+}
+
+function clearRows(){
+    while(quoteListUl.children.length > 0){
+        quoteListUl.lastElementChild.remove();
+    }
+}
