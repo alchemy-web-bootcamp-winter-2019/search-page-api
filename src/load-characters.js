@@ -1,11 +1,13 @@
 export function makeCharacterTemplate(character) {
     const template = document.createElement('template');
     template.innerHTML = `
-        <div class="character">
-            <h3>${character.name}</h3>
-            <img src="${character.image}" alt="character image">
-            <h4>Status: ${character.status}</h4>
-        </div>
+        <a href="./character.html?id=${character.id}">
+            <div class="character">
+                <h3>${character.name}</h3>
+                <img src="${character.image}" alt="character image">
+                <h4>Status: ${character.status}</h4>
+            </div>
+        </a>
     `;
     return template.content;
 }

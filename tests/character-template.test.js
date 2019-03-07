@@ -29,11 +29,13 @@ const character = {
 
 test('make character template', assert => {
     const expected = `
-        <div class="character">
-            <h3>Toxic Rick</h3>
-            <img src="https://rickandmortyapi.com/api/character/avatar/361.jpeg" alt="character image">
-            <h4>Status: Dead</h4>
-        </div>
+        <a href="./character.html?id=361">
+            <div class="character">
+                <h3>Toxic Rick</h3>
+                <img src="https://rickandmortyapi.com/api/character/avatar/361.jpeg" alt="character image">
+                <h4>Status: Dead</h4>
+            </div>
+        </a>
     `;
 
     const result = makeCharacterTemplate(character);
