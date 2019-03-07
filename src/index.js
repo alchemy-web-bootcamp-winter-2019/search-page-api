@@ -24,11 +24,10 @@ previousButton.addEventListener('click', () => {
     window.location.hash = newQuery;
 });
 
-window.addEventListener('change', () => {
-    const currentQuery = window.location.hash;
+window.addEventListener('hashchange', () => {
+    const currentQuery = window.location.hash.slice(1);
     const searchParamsObject = readFromQuery(currentQuery);
     const url = makeAPIurl(searchParamsObject);
-    
     fetch(url)
         .then(response => response.json())
         .then(body => {

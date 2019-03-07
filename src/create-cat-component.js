@@ -13,6 +13,9 @@ export function createCatTemplateFunction(catObject) {
 }
 
 export default function loadCats(catsObject) {
+    while(catGalleryNode.children.length > 0) {
+        catGalleryNode.firstElementChild.remove();
+    }
     catsObject.forEach(catObject => {
         const dom = createCatTemplateFunction(catObject);
         catGalleryNode.appendChild(dom);
