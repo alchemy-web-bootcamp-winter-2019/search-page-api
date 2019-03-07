@@ -20,3 +20,10 @@ export default function makeCharacterDetailTemplate(character) {
 
     return template.content;
 }
+
+export function getIdFromQuery(query) {
+    const searchParams = new URLSearchParams(query);
+    const result = searchParams.get('id');
+
+    return result;
+}
