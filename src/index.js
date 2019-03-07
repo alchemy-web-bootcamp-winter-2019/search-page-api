@@ -30,7 +30,15 @@ function loadQuery() {
     fetch(url)
         .then(response => response.json())
         .then(result => {
-            loadQuotes(result._embedded.quotes);
-            loadPageInfo(result.total, queryOptions);
-        });
+            if(!result.count) {
+                buttonsContainer.classList.add('hidden');
+                prompt.classList.remove('hidden');
+                prompt.textContent = 'No results found!';
+                loadQuotes(result._embedded);
+            } else {
+                loadQuotes(result._embedded.quotes);
+                loadPageInfo(result.total, queryOptions);
+            }
+        })
+        .catch(() => console.log('OVIWOVENVOWENVOWE'));
 }
