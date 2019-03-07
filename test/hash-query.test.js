@@ -44,6 +44,17 @@ test('search by colors (no name)', assert => {
     assert.equal(result, expected);
 });
 
+test('search by colors and name', assert => {
+    const search = {
+        name: 'goblin',
+        colors: ['black']
+    };
+    const existingQuery = 'name=goblin';
+    const expected = 'name=goblin&colors=black&page=1';
+    const result = writeSearchToQuery(existingQuery, search);
+    assert.equal(result, expected);
+});
+
 test('Write page to existing query', assert => {
     // arrange
     const existingQuery = 'name=goblin&page=1';
@@ -60,6 +71,21 @@ test('Make search options from existing query', assert => {
     const existingQuery = 'name=orc&page=2';
     const expected = {
         name: 'orc',
+        colors: [],
+        page: 2
+    };
+    // act
+    const result = readFromQuery(existingQuery);
+    // assert
+    assert.deepEqual(result, expected);
+});
+
+test('Make search options with colors from existing query', assert => {
+    // arrange
+    const existingQuery = 'name=orc&page=2&colors=red%2Cblack';
+    const expected = {
+        name: 'orc',
+        colors: ['red', 'black'],
         page: 2
     };
     // act
