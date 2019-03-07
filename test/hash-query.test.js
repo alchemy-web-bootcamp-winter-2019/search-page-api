@@ -39,7 +39,7 @@ test('search by colors (no name)', assert => {
         colors: ['white', 'blue']
     };
     const existingQuery = '';
-    const expected = 'colors=white%2Cblue&page=1';
+    const expected = 'colors=white%7Cblue&page=1';
     const result = writeSearchToQuery(existingQuery, search);
     assert.equal(result, expected);
 });

@@ -6,13 +6,13 @@ const searchName = document.getElementById('search-name');
 searchForm.addEventListener('submit', event => {
     event.preventDefault();
 
-    const searchFormData = new FormData(searchForm);;
+    const searchFormData = new FormData(searchForm);
 
     const searchTerms = {
         name: searchName.value,
         colors: searchFormData.getAll('color')
     };
     const existingQuery = window.location.hash.slice(1);
-    const newQuery = writeSearchToQuery(existingQuery, name);
+    const newQuery = writeSearchToQuery(existingQuery, searchTerms);
     window.location.hash = newQuery;
 });

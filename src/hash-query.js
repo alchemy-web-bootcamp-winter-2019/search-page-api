@@ -4,7 +4,7 @@ export function writeSearchToQuery(existingQuery, search) {
         searchParams.set('name', search.name);
     }
     if(search.colors.length > 0) {
-        searchParams.set('colors', search.colors.toString());
+        searchParams.set('colors', search.colors.join('|'));
     }
     searchParams.set('page', 1);
     return searchParams.toString();

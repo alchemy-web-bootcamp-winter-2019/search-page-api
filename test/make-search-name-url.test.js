@@ -9,6 +9,7 @@ test('given name and page return URL for fetch', assert => {
     const expected = 'https://api.magicthegathering.io/v1/cards?name=goblin+king&page=1';
     const searchOptions = {
         name: 'goblin king',
+        colors: [],
         page: 1
     };
     // act
@@ -22,6 +23,7 @@ test('if no search option, return empty string', assert => {
     const expected = '';
     const searchOptions = {
         name: '',
+        colors: [],
         page: 1
     };
     // act
