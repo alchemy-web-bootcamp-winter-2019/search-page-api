@@ -9,5 +9,8 @@ window.addEventListener('hashchange', () => {
     const existingQuery = window.location.hash.slice(1);
 
     const queryOptions = readFromQuery(existingQuery);
-    console.log(queryOptions);
+    
+    const url = makeSearchUrl(queryOptions);
+    
+
 });

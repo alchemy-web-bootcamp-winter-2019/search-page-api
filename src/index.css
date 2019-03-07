@@ -32,10 +32,16 @@ body {
     background: #e1aa72;
 }
 
+main {
+    display: flex;
+    justify-content: center;
+}
+
 #quote-list {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    width: 800px;
 }
 
 li {
