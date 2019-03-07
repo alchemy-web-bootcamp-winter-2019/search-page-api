@@ -31,7 +31,7 @@ export default function makePatternTemplate(pattern) {
     }
 
 
-    if(!pattern.first_photo.medium_url) {
+    if(!pattern.first_photo || pattern.first_photo.medium_url === null) {
         patternImg = '../assets/yarn.gif';
     }
     else {
