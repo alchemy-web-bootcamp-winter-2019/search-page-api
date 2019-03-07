@@ -10,7 +10,7 @@ test('create card template', assert => {
             <h2>Goblin Spymaster</h2>
             <p>Mana Cost: {2}{R}</p> 
             <img src="http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=420636type=card" alt="Image of Goblin Spymaster">
-            <p>Card text: First strike\nAt the beginning of each opponent's end step, that player creates a 1/1 red Goblin creature token with \"Creatures you control attack each combat if able.\""</p>
+            <p class="card-text">Card text: First strike\nAt the beginning of each opponent's end step, that player creates a 1/1 red Goblin creature token with \"Creatures you control attack each combat if able.\""</p>
             <p class="pt">P/T 2/1</p>
         </li>
     `;
@@ -36,7 +36,7 @@ test('If there is no image URL, use placeholder', assert => {
             <h2>Goblin Spymaster</h2>
             <p>Mana Cost: {2}{R}</p> 
             <img src="./assets/card-back.jpg" alt="Image of Goblin Spymaster">
-            <p>Card text: First strike\nAt the beginning of each opponent's end step, that player creates a 1/1 red Goblin creature token with \"Creatures you control attack each combat if able.\""</p>
+            <p class="card-text">Card text: First strike\nAt the beginning of each opponent's end step, that player creates a 1/1 red Goblin creature token with \"Creatures you control attack each combat if able.\""</p>
             <p class="pt">P/T 2/1</p>
         </li>
     `;
@@ -53,7 +53,7 @@ test('if no p/t, give pt a hidden class', assert => {
             <h2>Goblin Spymaster</h2>
             <p>Mana Cost: {2}{R}</p>
             <img src="./assets/card-back.jpg" alt="Image of Goblin Spymaster">
-            <p>Card text: "</p>
+            <p class="card-text">Card text: "</p>
         </li>
     `;
     const card = {
