@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <title>Giphy Finder</title>
+</head>
+<body>
+    <header>
+        <img id="header-image" src="./assets/header.gif" alt="GIF of Patrick Star">
+       <h1>Giphy Finder</h1>
+       <a href="./index.html">Refresh Search</a>
+    </header>
+    <main>
+        <form id="search-form">
+            <input type="text" name="" id="">
+            <label for="gif-input">
+               <button>Find a GIF</button>
+            </label>
+        </form>
+        <section id="pagination-buttons" class="hidden">
+            <button id="previous-button">Previous</button>
+            <span>Page <span id="current-page"></span> of <span id="total-pages"></span></span>
+            <button id="next-button">Next</button>
+        </section>
+        <section id="start-message">Search for a GIF</section>
+        <ul id="giphy-list">
+            
+        </ul>
+    </main>
+    <script type="module" src="./src/index.js"></script>
+</body>
+</html>
