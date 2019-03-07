@@ -5,7 +5,7 @@ import { readFromQuery } from './hash-query.js';
 import { updateSearchTerm } from './search-component.js';
 import searchCharacterUrl from './search-character-url.js';
 import updatePage from './paging-component.js';
-import updatePagingInfo from './paging-component.js';
+import { updatePagingInfo } from './paging-component.js';
 
 // loadCharacters(characters);
 
@@ -21,8 +21,8 @@ window.addEventListener('hashchange', () => {
         .then(body => {
             loadCharacters(body.results);
             const pagingInfo = {
-                page: body.pages,
-                totalPages: body.count
+                page: body.info.page,
+                totalPages: body.info.pages
             };
             updatePagingInfo(pagingInfo);
             updatePage(body);

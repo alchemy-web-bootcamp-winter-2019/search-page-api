@@ -23,6 +23,7 @@ export function updatePagingInfo(pagingInfo) {
     totalPages.textContent = pagingInfo.totalPages;
     nextButton.disabled = currentPageNumber === pagingInfo.totalPages;
     previousButton.disabled = currentPageNumber === 1;
+    console.log(currentPage);
 }
 
 export default function updatePage() {
