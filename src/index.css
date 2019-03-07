@@ -43,7 +43,7 @@ main {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    width: 1000px;
+    width: 900px;
     padding: 30px;
 }
 
