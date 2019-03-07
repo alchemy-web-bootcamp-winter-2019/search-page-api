@@ -10,6 +10,9 @@ export function makeGiphyTemplate(giphyObject) {
 
 export default function loadDisplay(listOfGifs) {
     const giphyList = document.getElementById('giphy-list');
+    while(giphyList.firstChild) {
+        giphyList.firstChild.remove();
+    }
     listOfGifs.forEach(gif => {
         const giphyObject = {
             src: gif.images.fixed_width_small.url
