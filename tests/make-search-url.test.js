@@ -7,9 +7,10 @@ QUnit.module('test makeSearchUrl');
 test('makeSearchUrl returns valid search URL', assert => {
     const queryOptions = {
         name: 'morty', 
+        gender: 'male',
         page: 3
     };
-    const expected = 'https://rickandmortyapi.com/api/character/?name=morty&page=3';
+    const expected = 'https://rickandmortyapi.com/api/character/?name=morty&gender=male&page=3';
 
     const result = makeSearchUrl(queryOptions);
 

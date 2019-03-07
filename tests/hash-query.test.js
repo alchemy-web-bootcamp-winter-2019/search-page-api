@@ -6,9 +6,12 @@ QUnit.module(' test url search params');
 
 test('add search params to empty query', assert => {
     const existingQuery = '';
-    const searchTerm = 'rick';
+    const searchTerm = { 
+        name: 'rick',
+        gender: ''
+    };
 
-    const expected = 'name=rick&page=1';
+    const expected = 'name=rick&gender=&page=1';
 
     const result = writeSearchToQuery(existingQuery, searchTerm);
 
@@ -16,10 +19,13 @@ test('add search params to empty query', assert => {
 });
 
 test('add search params to existing query', assert => {
-    const existingQuery = 'name=morty&page=1';
-    const searchTerm = 'rick';
+    const existingQuery = 'name=morty&gender=femalepage=1';
+    const searchTerm = { 
+        name: 'rick',
+        gender: 'male'
+    };
 
-    const expected = 'name=rick&page=1';
+    const expected = 'name=rick&gender=male&page=1';
 
     const result = writeSearchToQuery(existingQuery, searchTerm);
 
@@ -42,9 +48,10 @@ test('write page to existing query', assert => {
 QUnit.module('read query');
 
 test('read search options from query', assert => {
-    const existingQuery = 'name=morty&page=1';
+    const existingQuery = 'name=morty&gender=unknown&page=1';
     const expected = {
         name: 'morty',
+        gender: 'unknown',
         page: 1
     };
 
@@ -52,19 +59,3 @@ test('read search options from query', assert => {
 
     assert.deepEqual(result, expected);
 });
-
-
-
-
-// test('reads options from query', assert => {
-//     // arrange
-//     const query = 'searchTerm=star+wars&page=3';
-//     const expected = {
-//         searchTerm: 'star wars',
-//         page: 3
-//     };
-//     // act
-//     const result = readFromQuery(query);
-//     // assert
-//     assert.deepEqual(result, expected);
-// });

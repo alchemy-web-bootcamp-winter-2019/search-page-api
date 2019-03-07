@@ -7,6 +7,7 @@ export default function makeSearchUrl(queryOptions) {
     // }
     const url = new URL(SEARCH_URL);
     url.searchParams.set('name', queryOptions.name);
+    url.searchParams.set('gender', queryOptions.gender);
     url.searchParams.set('page', queryOptions.page);
 
     return url.toString();
