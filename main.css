@@ -24,6 +24,37 @@ header {
     margin: 8px;
 }
 
+input {
+    border: none;
+    border-radius: 5px;
+    margin: 5px;
+}
+
+#pattern-search-button {
+    border: none;
+    border-radius: 5px;
+}
+
+#paging-controls {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: baseline;
+}
+
+#previous-button, #next-button {
+    margin: 5px;
+    border: none;
+    background-color: #FCEADE;
+    color: #FF8A5B;
+    font-size: 1.75em;
+    font-weight: 700;
+}
+
+#previous-button:hover, #next-button:hover {
+    color: #EA526F;
+}
+
 ul {
     list-style: none;
     padding: 0;
