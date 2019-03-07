@@ -1,4 +1,4 @@
-import { writeSearchToQuery } from '../src/hash-query.js';
+import { writeSearchToQuery, writePageToQuery } from '../src/hash-query.js';
 
 const test = QUnit.test;
 
@@ -28,13 +28,6 @@ test('add search params to existing query', assert => {
 
 QUnit.module('change page');
 
-function writePageToQuery(existingQuery, page) {
-    const searchParams = new URLSearchParams(existingQuery);
-    searchParams.set('page', page);
-
-    return searchParams.toString();
-}
-
 test('write page to existing query', assert => {
     const existingQuery = 'name=morty&page=1';
     const page = 2;
@@ -45,3 +38,42 @@ test('write page to existing query', assert => {
 
     assert.equal(result, expected);
 });
+
+QUnit.module('read query');
+
+function readFromQuery(query) {
+    const searchParams = new URLSearchParams(query);
+    const result = {
+        name: searchParams.get('name'),
+        page: parseInt(searchParams.get('page'))
+    };
+    return result;
+}
+
+test('read search options from query', assert => {
+    const existingQuery = 'name=morty&page=1';
+    const expected = {
+        name: 'morty',
+        page: 1
+    };
+
+    const result = readFromQuery(existingQuery);
+
+    assert.deepEqual(result, expected);
+});
+
+
+
+
+// test('reads options from query', assert => {
+//     // arrange
+//     const query = 'searchTerm=star+wars&page=3';
+//     const expected = {
+//         searchTerm: 'star wars',
+//         page: 3
+//     };
+//     // act
+//     const result = readFromQuery(query);
+//     // assert
+//     assert.deepEqual(result, expected);
+// });

@@ -5,3 +5,10 @@ export function writeSearchToQuery(existingQuery, searchTerm) {
 
     return searchParams.toString();
 }
+
+export function writePageToQuery(existingQuery, page) {
+    const searchParams = new URLSearchParams(existingQuery);
+    searchParams.set('page', page);
+
+    return searchParams.toString();
+}
