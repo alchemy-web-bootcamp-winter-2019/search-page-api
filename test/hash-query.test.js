@@ -1,13 +1,7 @@
+import { writeSearchToQuery, writePageToQuery, readFromQuery } from '../src/hash-query.js';
 const test = QUnit.test;
 
 QUnit.module('hash query functionality');
-
-function writeSearchToQuery(existingQuery, searchTerm) {
-    const url = new URLSearchParams(existingQuery);
-    url.set('searchTerm', searchTerm);
-    url.set('page', 1);
-    return url.toString();
-}
 
 test('no existing query', function(assert) {
     // Arrange
@@ -40,11 +34,6 @@ test('overwrite existing query', assert => {
     assert.equal(result, expected);
 });
 
-function writePageToQuery(existingQuery, page) {
-    const url = new URLSearchParams(existingQuery);
-    url.set('page', page);
-    return url.toString();
-}
 
 test('new page', assert => {
     // Arrange
@@ -59,16 +48,6 @@ test('new page', assert => {
     // Assert
     assert.equal(result, expected);
 });
-
-function readFromQuery(existingQuery) {
-    const url = new URLSearchParams(existingQuery);
-    const queryOptions = {
-        searchTerm: url.get('searchTerm'),
-        page: Number(url.get('page'))
-    };
-
-    return queryOptions;
-}
 
 
 test('make queryOptions object', assert => {
