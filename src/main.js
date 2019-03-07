@@ -4,6 +4,7 @@ import './search-component.js';
 import { readFromQuery } from './hash-query.js';
 import { updateSearchTerm } from './search-component.js';
 import searchCharacterUrl from './search-character-url.js';
+import updatePage from './paging-component.js';
 
 // loadCharacters(characters);
 
@@ -19,5 +20,6 @@ window.addEventListener('hashchange', () => {
         .then(body => {
             console.log(body);
             loadCharacters(body.results);
+            updatePage(body);
         });
 });
