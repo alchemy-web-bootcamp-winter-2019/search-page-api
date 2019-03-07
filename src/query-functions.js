@@ -10,9 +10,11 @@ export function readFromQuery(query) {
     const searchParams = new URLSearchParams(query);
     const limit = parseInt(searchParams.get('limit'));
     const q = searchParams.get('q');
+    const offset = parseInt(searchParams.get('offset'));
     const queryOptions = {
         limit: limit,
-        searchTerm: q
+        searchTerm: q,
+        offset: offset
     };
 
     return queryOptions;

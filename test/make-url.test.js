@@ -6,10 +6,11 @@ QUnit.module('making our url');
 
 test('create API url when passed queryOptions', assert => {
     //Arrange
-    const expected = 'http://api.giphy.com/v1/gifs/search?api_key=kk0i6M6rAbhZ9kP6R0MGVoAUafZgC5rI&limit=5&q=ryan+gosling';
+    const expected = 'http://api.giphy.com/v1/gifs/search?api_key=kk0i6M6rAbhZ9kP6R0MGVoAUafZgC5rI&limit=5&q=ryan+gosling&offset=0';
     const queryOptions = {
         limit: 5,
-        searchTerm: 'ryan gosling'
+        searchTerm: 'ryan gosling',
+        offset: 0
     };
     //Act
     const result = makeURL(queryOptions);

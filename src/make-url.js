@@ -6,6 +6,6 @@ export function makeURL(queryOptions) {
     newUrl.searchParams.set('api_key', API_KEY);
     newUrl.searchParams.set('limit', queryOptions.limit);
     newUrl.searchParams.set('q', queryOptions.searchTerm);
-    // newUrl.searchParams.set('offset', 5);
+    newUrl.searchParams.set('offset', queryOptions.offset);
     return newUrl.toString();
 }   
