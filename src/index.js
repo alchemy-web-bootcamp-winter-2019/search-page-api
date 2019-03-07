@@ -1,6 +1,7 @@
-import loadSearch from './search-component.js';
+import loadSearch, { updateSearchTerm } from './search-component.js';
 import loadPatterns from './load-patterns.js';
 import makeSearchUrl from './make-search-url.js';
+
 
 //thank you easton and ryan for helping with this part
 loadSearch(searchOptions => {
@@ -21,3 +22,7 @@ loadSearch(searchOptions => {
             loadPatterns(results);
         });
 });
+
+// function runSearchFromQuery() {
+
+// }

@@ -1,4 +1,5 @@
 const searchForm = document.getElementById('search');
+const searchTermInput = searchForm.querySelector('input');
 
 export default function loadSearch(callback) {
     searchForm.addEventListener('submit', event => {
@@ -17,4 +18,8 @@ export default function loadSearch(callback) {
 
         callback(searchOptions);
     });
+}
+
+export function updateSearchTerm(searchOptions) {
+    searchTermInput.value = searchOptions.term;
 }
