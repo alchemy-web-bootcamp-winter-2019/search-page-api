@@ -10,7 +10,7 @@ function loadQuery() {
 
     const searchOptions = readFromQuery(window.location.hash);
     const apiURL = makeSearchUrlFromQuery(searchOptions);
-    let pagingInfo ={};
+    let pagingInfo = {};
     fetch(apiURL)
         .then(response => response.json())
         .then(body => {
