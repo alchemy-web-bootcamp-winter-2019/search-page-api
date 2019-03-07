@@ -12,8 +12,11 @@ window.addEventListener('hashchange', () => {
     const url = makeSearchNameURL(searchOptions);
 
     fetch(url)
-        .then(response => response.json())
-        .then(body => loadCards(body.cards))
+        .then(response => Promise.all([response.json(), response.headers.get('total-count')]))
+        .then(responses => {
+            loadCards(responses[0].cards);
+            console.log(responses[1]);
+        })
         .catch(err => {
             console.log(err);
         });
