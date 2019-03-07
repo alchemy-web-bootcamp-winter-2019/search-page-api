@@ -1,35 +1,30 @@
-import writeOptionsAsQuery from '../src/write-options-query.js';
+import writeSearchToQuery from '../src/write-query-options.js';
 
 const test = QUnit.test;
 
+
 QUnit.module('search options to hash tests');
 
-test('makes query in URL to be the search term', assert => {
+
+
+
+test('write search to an empty query', assert => {
     //arrange
-    const searchOptions = {
-        term: 'ding dong',
-    };
-
+    const existingQuery = '';
+    const searchTerm = 'ding dong';
     //act
-    const query = writeOptionsAsQuery(searchOptions);
-
+    const query = writeSearchToQuery(existingQuery, searchTerm);
     //assert
-    assert.equal(query, '?query=ding+dong');
+    assert.equal(query, 'query=ding+dong');
 });
 
-test('makes query in URL to be the search term plus paging', assert => {
+test('write search to existing query, change search', assert => {
     //arrange
-    const searchOptions = {
-        term: 'ding dong',
-    };
-
-    const pagingOptions = {
-        page: 1
-    };
-
+    const existingQuery = 'query=green+elephant';
+    const searchTerm = 'ding dong';
     //act
-    const query = writeOptionsAsQuery(searchOptions, pagingOptions);
-
+    const query = writeSearchToQuery(existingQuery, searchTerm);
     //assert
-    assert.equal(query, '?query=ding+dong&page=1');
+
+    assert.equal(query, 'query=ding+dong');
 });

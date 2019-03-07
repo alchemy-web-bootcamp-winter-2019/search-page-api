@@ -1,25 +1,17 @@
+import writeSearchToQuery from './write-query-options.js';
 const searchForm = document.getElementById('search');
 const searchTermInput = searchForm.querySelector('input');
 
-export default function loadSearch(callback) {
-    searchForm.addEventListener('submit', event => {
-        event.preventDefault();
+searchForm.addEventListener('submit', event => {
+    event.preventDefault();
 
-        const formData = new FormData(searchForm);
-        const searchTerm = formData.get('pattern-search');
+    const searchTerm = searchTermInput.value;
+    const existingQuery = window.location.hash.slice(1);
 
-        if(searchTerm.trim() === '') {
-            return;
-        }
+    const newQuery = writeSearchToQuery(existingQuery, searchTerm);
+    window.location.hash = newQuery;
+});
 
-        const searchOptions = {
-            term: searchTerm
-        };
-
-        callback(searchOptions);
-    });
-}
-
-export function updateSearchTerm(searchOptions) {
-    searchTermInput.value = searchOptions.term;
+export default function updateSearchTerm(searchOptions) {
+    searchTermInput.value = searchOptions.query;
 }

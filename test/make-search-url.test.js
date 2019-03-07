@@ -9,11 +9,13 @@ QUnit.module('search tests');
 test('url includes encoded search term from input', assert => {
     //arrange
     const searchOptions = {
-        term: 'ding dong'
+        term: 'ding dong',
     };
     //act
     const url = makeSearchUrl(searchOptions);
     //assert
-    assert.equal(url, `https://cors-anywhere.herokuapp.com/https://api.ravelry.com/patterns/search.json?query=ding%20dong`);
+    assert.equal(url, `https://cors-anywhere.herokuapp.com/https://api.ravelry.com/patterns/search.json?query=ding+dong`);
 
 });
+
+
