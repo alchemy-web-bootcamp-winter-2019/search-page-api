@@ -19,17 +19,28 @@ header {
     width: 100%;
 }
 
+h1 {
+    font-family: 'Permanent Marker', cursive;
+    font-size: 72px;
+    line-height: 1;
+    text-align: center;
+    color: white;
+    width: 100%;
+    background: lightcoral;
+    margin: 0px;
+    padding: 10px 0px;
+}
+
 form {
     display: flex;
     justify-content: flex-end;
     align-items: center;
     height: 100px;
-    border-bottom: 1px solid lightgrey;
     width: 100%;
 }
 
 #input-field {
-    height: 85px;
+    height: 84px;
     width: 80%;
     border: none;
     font-family: 'Permanent Marker', cursive;
@@ -37,10 +48,38 @@ form {
     flex-grow: 1;
     text-align: right;
     padding: 5px 35px 10px 5px;
+    border-bottom: 1px solid lightgrey;
+
 }
 
 input::placeholder {
     color: rgb(235, 177, 177);
+}
+
+.blinking-cursor {
+	position: relative;
+}
+.blinking-cursor p {
+	position: relative;
+	width: 5px;
+	height: 80%;
+	background-color: lightgray;
+	/* left: 5px; */
+    /* top: 10%; */
+    right: 20px;
+	animation-name: blink;
+	animation-duration: 1000ms;
+	animation-iteration-count: infinite;
+    opacity: 1;
+}
+  
+.blinking-cursor input:focus + i {
+	display: none;
+}
+
+@keyframes blink {
+	from { opacity: 1; }
+	to { opacity: 0; }
 }
 
 button {
@@ -69,6 +108,13 @@ button img {
     color: white;
     font-size: 36px;
     font-family: 'Permanent Marker', cursive;
+}
+
+#button-area a {
+    text-decoration: none;
+    font-style: italic;
+    padding-right: 25px;
+    color: lightcoral;
 }
 
 #page-number-area {
