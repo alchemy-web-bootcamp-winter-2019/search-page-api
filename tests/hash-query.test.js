@@ -1,12 +1,20 @@
 const test = QUnit.test;
 
-QUnit.module('what is this set of tests testing?');
+function writeSearchToQuery(existingQuery, searchTerm) {
+    const searchParams = new URLSearchParams(existingQuery);
+    searchParams.set('searchTerm', searchTerm);
+    searchParams.set('page', 1);
+    return searchParams.toString();
+}
 
-test('what am i testing?', assert => {
+QUnit.module('hash');
+
+test('add search to hash', assert => {
     // arrange
-
+    const existingQuery = '';
+    const searchTerm = 'rick';
     // act
-
+    const result = writeSearchToQuery(existingQuery, searchTerm);
     // assert
-
+    assert.equal(result, 'searchTerm=rick&page=1')
 });
