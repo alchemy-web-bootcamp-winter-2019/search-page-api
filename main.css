@@ -1,3 +1,8 @@
+body {
+    font-family: 'Oswald', sans-serif;
+    letter-spacing: 2px;
+}
+
 section {
     padding: 10px;
 }
@@ -36,3 +41,23 @@ h2:hover {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
+
+#character-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#character-info {
+    border: 1px solid black;
+    background: green;
+}
+
+dt {
+    font-weight: bold;
+}
+
+#return {
+    font-weight: bold;
+}
+
