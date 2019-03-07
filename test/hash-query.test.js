@@ -59,3 +59,27 @@ test('new page', assert => {
     // Assert
     assert.equal(result, expected);
 });
+
+function readFromQuery(existingQuery) {
+    const url = new URLSearchParams(existingQuery);
+    const queryOptions = {
+        searchTerm: url.get('searchTerm'),
+        page: Number(url.get('page'))
+    };
+
+    return queryOptions;
+}
+
+
+test('make queryOptions object', assert => {
+    // Arrange
+    const expected = {
+        searchTerm: 'hillary clinton',
+        page: 2
+    };
+    const existingQuery = 'searchTerm=hillary+clinton&page=2';
+    // Act
+    const result = readFromQuery(existingQuery);
+    // Assert
+    assert.deepEqual(result, expected);
+});
