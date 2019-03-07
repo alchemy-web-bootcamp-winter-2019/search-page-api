@@ -17,3 +17,17 @@ test('Test name', assert => {
     // Assert
     assert.equal(result, expected);
 });
+
+test('return empty string when no search prompted', assert => {
+    // Arrange
+    const expected = '';
+    const queryOptions = {
+        searchTerm: '',
+        page: 1
+    };
+    // Act
+    const result = makeSearchUrl(queryOptions);
+
+    // Assert
+    assert.equal(result, expected);
+});

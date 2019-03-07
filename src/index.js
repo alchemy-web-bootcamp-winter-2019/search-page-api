@@ -9,12 +9,19 @@ loadQuery();
 
 window.addEventListener('hashchange', loadQuery);
 
+
+
 function loadQuery() {
     const existingQuery = window.location.hash.slice(1);
 
     const queryOptions = readFromQuery(existingQuery);
     
     const url = makeSearchUrl(queryOptions);
+
+    if(!url){
+        return;    
+    }
+
 
     fetch(url)
         .then(response => response.json())
