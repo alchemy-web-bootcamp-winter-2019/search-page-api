@@ -47,7 +47,7 @@ export default function makePatternTemplate(pattern) {
     </section>
 
     <section class="li-image">
-        <a href="https://www.ravelry.com/patterns/library/${permalink}"><img src="${patternImg}" alt=""></a>
+        <a href="https://www.ravelry.com/patterns/library/${permalink}"><img src="${patternImg}" alt="${patternName}"></a>
     </section>
     </li>
     `;
