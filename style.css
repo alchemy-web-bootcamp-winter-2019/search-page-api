@@ -19,8 +19,9 @@ main {
     flex-direction: column;
 }
 
-#character-container {
+#character-list {
     display: flex;
+    justify-content: center;
     flex-direction: row;
     flex-wrap: wrap;
 }
