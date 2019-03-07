@@ -2,7 +2,7 @@
 import loadQuotes from './make-template.js';
 import { readFromQuery } from '../src/hash-query.js';
 import makeSearchUrl from './make-search-url.js';
-
+import './paging-component.js';
 import './search-component.js';
 
 loadQuery();
