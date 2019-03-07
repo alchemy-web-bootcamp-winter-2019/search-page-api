@@ -11,8 +11,6 @@ searchForm.addEventListener('submit', event => {
         gender: genderInput.value
     };
     const existingQuery = window.location.hash.slice(1);
-    // console.log(existingQuery);
-    console.log(searchTerm);
     const newQuery = writeSearchToQuery(existingQuery, searchTerm);
     window.location.hash = newQuery;
 });
