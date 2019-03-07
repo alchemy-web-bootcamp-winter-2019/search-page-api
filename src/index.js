@@ -7,7 +7,11 @@ import { updatePaging } from './paging-component.js';
 const prompt = document.getElementById('prompt');
 const cardContainer = document.getElementById('card-container');
 
-window.addEventListener('hashchange', () => {
+window.addEventListener('hashchange', loadQuery);
+
+loadQuery();
+
+function loadQuery() {
     const existingQuery = window.location.hash.slice(1);
     const searchOptions = readFromQuery(existingQuery);
     const url = makeSearchNameURL(searchOptions);
@@ -30,4 +34,4 @@ window.addEventListener('hashchange', () => {
             /* eslint-disable-next-line */
             console.error(err);
         });
-});
+}
