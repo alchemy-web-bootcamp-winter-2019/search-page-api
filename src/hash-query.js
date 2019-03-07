@@ -20,3 +20,9 @@ export function readFromQuery(existingQuery) {
     return queryOptions;
 }
 
+export function updateHashQuery(callback, queryOption){
+    const existingQuery = window.location.hash.slice(1);
+    const newQuery = callback(existingQuery, queryOption);
+    window.location.hash = newQuery;
+}
+

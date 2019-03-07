@@ -2,7 +2,7 @@
 import loadQuotes from './make-template.js';
 import { readFromQuery } from '../src/hash-query.js';
 import makeSearchUrl from './make-search-url.js';
-import './paging-component.js';
+import { loadPageInfo } from './paging-component.js';
 import './search-component.js';
 
 loadQuery();
@@ -18,6 +18,8 @@ function loadQuery() {
     
     fetch(url)
         .then(response => response.json())
-        .then(result => result._embedded.quotes)
-        .then(loadQuotes);
+        .then(result => {
+            loadQuotes(result._embedded.quotes);
+            loadPageInfo(result.total, queryOptions.page);
+        });
 }

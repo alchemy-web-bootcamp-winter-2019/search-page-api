@@ -1,4 +1,4 @@
-import { writePageToQuery } from "./hash-query.js";
+import { writePageToQuery, updateHashQuery } from "./hash-query.js";
 const previousButton = document.getElementById('previous-button');
 const nextButton = document.getElementById('next-button');
 const currentPageNode = document.getElementById('current-page');
@@ -10,20 +10,22 @@ nextButton.addEventListener('click', event => {
     event.preventDefault();
 
     currentPageNumber++;
-    const existingQuery = window.location.hash.slice(1);
-
-    const newQuery = writePageToQuery(existingQuery, currentPageNumber);
-
-    window.location.hash = newQuery;
+    updateHashQuery(writePageToQuery, currentPageNumber);
 });
 
 previousButton.addEventListener('click', event => {
     event.preventDefault();
 
     currentPageNumber--;
-    const existingQuery = window.location.hash.slice(1);
-
-    const newQuery = writePageToQuery(existingQuery, currentPageNumber);
-
-    window.location.hash = newQuery;
+    updateHashQuery(writePageToQuery, currentPageNumber);
 });
+
+export function loadPageInfo(totalQuotesNumber, page){
+
+    const PER_PAGE = 9;
+    currentPageNode.textContent = page;
+    const totalPagesNumber = Math.ceil(totalQuotesNumber / PER_PAGE);
+    totalPagesNode.textContent = totalPagesNumber;
+    nextButton.disabled = currentPageNumber === totalPagesNumber;
+    previousButton.disabled = page === 1;
+}
