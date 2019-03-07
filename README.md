@@ -21,3 +21,6 @@ impliment write filter and write page to index
     - event listener for form submit
         - update url
 
+write make url function in tdd
+
+create hashchange event listener on index.js

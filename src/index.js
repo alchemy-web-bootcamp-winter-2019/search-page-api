@@ -1,3 +1,14 @@
 import './filter-components.js';
+import makeSearchUrlFromQuery from './make-search-url.js';
+import { readFromQuery } from './query-functions.js';
 
-fetch('https://rickandmortyapi.com/api/character/?name=rick&status=dead&species=human&page=1').then(response => response.json()).then(body => console.log(body.results[0]));
+const characterListNode = document.getElementById('character-list');
+
+window.addEventListener('hashchange', loadQuery);
+
+function loadQuery() {
+
+const test = readFromQuery(window.location.hash);
+console.log(test, 'hi');
+
+}
