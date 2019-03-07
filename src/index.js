@@ -29,9 +29,11 @@ previousButton.addEventListener('click', () => {
 });
 
 window.addEventListener('hashchange', () => {
+    const currentPageNode = document.getElementById('current-page-node');
     const currentQuery = window.location.hash.slice(1);
     const searchParams = new URLSearchParams(currentQuery);
     const currentPage = searchParams.get('page');
+    currentPageNode.innerHTML = currentPage;
     const searchParamsObject = readFromQuery(currentQuery);
     const url = makeAPIurl(searchParamsObject);
     // console.log('url before fetch', url);
