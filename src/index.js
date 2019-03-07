@@ -14,7 +14,7 @@ export function resetPageNumber() {
     currentPageNumber = 1;
 }
 
-function checkButtonStatus(){
+function checkButtonStatus() {
     previousButton.disabled = currentPageNumber <= 1;
 }
 checkButtonStatus();
@@ -48,8 +48,7 @@ window.addEventListener('hashchange', () => {
     fetch(url)
         .then(response => response.json())
         .then(body => {
-            console.log('fetch body', body);
             loadCats(body);
-        });
-        // .catch(console.error());
+        })
+        .catch(error => console.log('catch errors', error));
 });
