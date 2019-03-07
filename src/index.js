@@ -23,6 +23,7 @@ function loadQuery() {
         })
         .catch((error) => {
             console.log('no results');
+            console.log(error);
             // console.log(error);
             // console.log(body);
             // loadCharacters([]);
