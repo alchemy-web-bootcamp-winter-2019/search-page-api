@@ -5,7 +5,7 @@ export function makeCardTemplate(card) {
             <p>Mana Cost: ${card.manaCost}</p>
             <img src="${card.imageUrl ? card.imageUrl : './assets/card-back.jpg'}" alt="Image of ${card.name}">
             <p>Card text: ${card.text}"</p>
-            <p class="pt">P/T ${card.power}/${card.toughness}</p>
+            ${card.power ? `<p class="pt">P/T ${card.power}/${card.toughness}</p>` : ''}
         </li>
     `;
     const template = document.createElement('template');

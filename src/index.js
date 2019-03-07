@@ -6,7 +6,6 @@ import { updatePaging } from './paging-component.js';
 
 const prompt = document.getElementById('prompt');
 const cardContainer = document.getElementById('card-container');
-// loadCards(testArray);
 
 window.addEventListener('hashchange', () => {
     const existingQuery = window.location.hash.slice(1);
@@ -25,10 +24,10 @@ window.addEventListener('hashchange', () => {
         .then(response => Promise.all([response.json(), response.headers.get('total-count')]))
         .then(responses => {
             loadCards(responses[0].cards);
-            console.log(responses[1]);
             updatePaging(searchOptions, responses[1]);
         })
         .catch(err => {
-            console.log(err);
+            /* eslint-disable-next-line */
+            console.error(err);
         });
 });
