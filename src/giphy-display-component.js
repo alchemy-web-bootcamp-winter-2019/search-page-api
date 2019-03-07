@@ -1,6 +1,6 @@
 export function makeGiphyTemplate(giphyObject) {
     const html = /*html*/ `<li>
-    <img src="${giphyObject.src}" alt="ryan gosling gif">
+    <img src="${giphyObject.src}" alt="gif">
 </li>
     `;
     const template = document.createElement('template');
@@ -19,6 +19,5 @@ export default function loadDisplay(listOfGifs) {
         };
         const dom = makeGiphyTemplate(giphyObject);
         giphyList.appendChild(dom);
-
     });
 }

@@ -8,10 +8,6 @@ import loadPagination from './pagination-component.js';
 const paginationButtons = document.getElementById('pagination-buttons');
 const startMessage = document.getElementById('start-message');
 
-// console.log(data[0].images.fixed_width_small.url); path to url
-
-
-
 window.addEventListener('hashchange', () => {
     const query = window.location.hash.slice(1);
     const queryOptions = readFromQuery(query);

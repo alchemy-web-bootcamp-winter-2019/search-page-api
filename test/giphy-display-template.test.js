@@ -8,7 +8,7 @@ QUnit.module('Testing display template');
 test('create LI template for gifs', assert => {
     //Arrange
     const expected = /*html*/ ` <li>
-    <img src="https://media2.giphy.com/media/rwNpHtaMGnStW/100w.gif" alt="ryan gosling gif">
+    <img src="https://media2.giphy.com/media/rwNpHtaMGnStW/100w.gif" alt="gif">
 </li>
     `;
     const giphyObject = {
