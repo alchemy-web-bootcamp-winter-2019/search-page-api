@@ -1,1 +1,1 @@
-fetch('https://rickandmortyapi.com/api/character/?page=12').then(response => response.json()).then(body => console.log(body));
+// fetch('https://rickandmortyapi.com/api/character/?page=12').then(response => response.json()).then(body => console.log(body));

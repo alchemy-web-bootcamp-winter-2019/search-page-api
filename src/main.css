@@ -12,6 +12,19 @@ header h1 {
     flex-grow: 1;
 }
 
+#paging-section {
+    display: flex;
+    align-items: center;
+}
+
+#paging-section span {
+    margin: 5px;
+}
+
+#paging-section button {
+    border-radius: 5px;
+}
+
 #character-list {
     width: 1500px;
     display: flex;
