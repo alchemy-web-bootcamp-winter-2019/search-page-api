@@ -19,14 +19,17 @@
     </header>
 
     <main>
+        <p id="prompt">Find your Favorite Rick and Morty character!</p>
 
-        <section id="pagination-container">
-            <button id="previous-button">&lt; Previous</button>
-            <p id="page-range">Page <span id="current-page">1</span> of <span id="total-pages">1</span></p>
-            <button id="next-button">Next &gt;</button>
+        <section id="results-container" class="hidden">
+            <section id="pagination-container">
+                <button id="previous-button">&lt; Previous</button>
+                <p id="page-range">Page <span id="current-page">1</span> of <span id="total-pages">1</span></p>
+                <button id="next-button">Next &gt;</button>
+            </section>
+    
+            <section id="character-list"></section>
         </section>
-
-        <section id="character-list"></section>
     </main>
 <script type="module" src="./src/main.js">  </script>
 </body>

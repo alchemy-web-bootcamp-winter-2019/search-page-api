@@ -62,3 +62,7 @@ button {
     background-color: #e1f1f1;
     border: none;
 }
+
+.hidden {
+    display: none;
+}
