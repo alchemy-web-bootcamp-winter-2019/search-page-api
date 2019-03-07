@@ -8,6 +8,10 @@ const previousButton = document.getElementById('previous-button');
 
 let currentPageNumber = 1;
 
+export function resetPageNumber() {
+    currentPageNumber = 1;
+}
+
 nextButton.addEventListener('click', () => {
     const existingQuery = window.location.hash.slice(1);
     event.preventDefault();
@@ -26,11 +30,16 @@ previousButton.addEventListener('click', () => {
 
 window.addEventListener('hashchange', () => {
     const currentQuery = window.location.hash.slice(1);
+    const searchParams = new URLSearchParams(currentQuery);
+    const currentPage = searchParams.get('page');
     const searchParamsObject = readFromQuery(currentQuery);
     const url = makeAPIurl(searchParamsObject);
+    // console.log('url before fetch', url);
     fetch(url)
         .then(response => response.json())
         .then(body => {
+            console.log('fetch body', body);
             loadCats(body);
         });
+        // .catch(console.error());
 });
