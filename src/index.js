@@ -1,9 +1,8 @@
-// import quoteList from '../src/data.js';
-import loadQuotes from './make-template.js';
+import loadQuotes from './display-component.js';
+import { loadPageInfo } from './display-component.js';
 import { readFromQuery } from '../src/hash-query.js';
 import makeSearchUrl from './make-search-url.js';
-import { loadPageInfo } from './paging-component.js';
-import './search-component.js';
+import './event-component.js';
 
 const buttonsContainer = document.getElementById('buttons-container');
 const prompt = document.getElementById('prompt');
@@ -28,10 +27,10 @@ function loadQuery() {
         prompt.classList.add('hidden');
     }
 
-    fetch(url)
-        .then(response => response.json())
-        .then(result => {
-            loadQuotes(result._embedded.quotes);
-            loadPageInfo(result.total, queryOptions);
-        });
+    // fetch(url)
+    //     .then(response => response.json())
+    //     .then(result => {
+    //         loadQuotes(result._embedded.quotes);
+    //         loadPageInfo(result.total, queryOptions);
+    //     });
 }

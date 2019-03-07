@@ -1,4 +1,4 @@
-import { makeTemplate, convertDate } from '../src/make-template.js';
+import { makeTemplate, convertDate } from '../src/display-component.js';
 
 const test = QUnit.test;
 

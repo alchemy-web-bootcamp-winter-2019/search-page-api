@@ -11,6 +11,12 @@ export function writePageToQuery(existingQuery, page) {
     return url.toString();
 }
 
+export function updateHashQuery(callback, queryOption){
+    const existingQuery = window.location.hash.slice(1);
+    const newQuery = callback(existingQuery, queryOption);
+    window.location.hash = newQuery;
+}
+
 export function readFromQuery(existingQuery) {
     const url = new URLSearchParams(existingQuery);
     const queryOptions = {
@@ -19,10 +25,3 @@ export function readFromQuery(existingQuery) {
     };
     return queryOptions;
 }
-
-export function updateHashQuery(callback, queryOption){
-    const existingQuery = window.location.hash.slice(1);
-    const newQuery = callback(existingQuery, queryOption);
-    window.location.hash = newQuery;
-}
-
