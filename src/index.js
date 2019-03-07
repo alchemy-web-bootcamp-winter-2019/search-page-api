@@ -20,6 +20,6 @@ function loadQuery() {
                 totalPages: body.info.pages
             };
             updatePaging(pagingInfo);})
-            .catch(err => console.error(err));
+        .catch(err => console.error(err));
 
 }

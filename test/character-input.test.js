@@ -2,7 +2,7 @@ const test = QUnit.test;
 
 QUnit.module('character template');
 
-import { makeCharacterHtml } from '../src/character-compnent.js';
+import { makeCharacterHtml } from '../src/character-component.js';
 
 test('template function returns html', function(assert) {
     //arrange
