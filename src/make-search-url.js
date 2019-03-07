@@ -1,5 +1,5 @@
 export default function makeSearchUrl(queryOptions) {
-    const API_URL = 'https://api.tronalddump.io/search/quote?';
+    const API_URL = 'https://cors-anywhere.herokuapp.com/https://api.tronalddump.io/search/quote?';
 
     const url = new URL(API_URL);
     url.searchParams.set('query', queryOptions.searchTerm);

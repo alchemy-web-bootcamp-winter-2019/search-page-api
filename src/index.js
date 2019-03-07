@@ -1,9 +1,11 @@
-import quoteList from '../src/data.js';
+// import quoteList from '../src/data.js';
 import loadQuotes from './make-template.js';
 import { readFromQuery } from '../src/hash-query.js';
+import makeSearchUrl from './make-search-url.js';
+
 import './search-component.js';
 
-loadQuotes(quoteList);
+// loadQuotes(quoteList);
 
 window.addEventListener('hashchange', () => {
     const existingQuery = window.location.hash.slice(1);
@@ -12,5 +14,9 @@ window.addEventListener('hashchange', () => {
     
     const url = makeSearchUrl(queryOptions);
     
+    fetch(url)
+        .then(response => response.json())
+        .then(result => result._embedded.quotes)
+        .then(loadQuotes);
 
 });
