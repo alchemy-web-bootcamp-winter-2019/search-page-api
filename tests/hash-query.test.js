@@ -3,12 +3,7 @@ const test = QUnit.test;
 QUnit.module('hash');
 
 // writeSearchToQuery
-function writeSearchToQuery(existingQuery, searchTerm) {
-    const searchParams = new URLSearchParams(existingQuery);
-    searchParams.set('searchTerm', searchTerm);
-    searchParams.set('page', 1);
-    return searchParams.toString();
-}
+import { writeSearchToQuery } from '../src/hash-query.js';
 
 test('add search to hash', assert => {
     // arrange
@@ -32,11 +27,7 @@ test('change existing search', assert => {
 
 
 // writeSearchToQuery
-function writePageToQuery(existingQuery, page) {
-    const searchParams = new URLSearchParams(existingQuery);
-    searchParams.set('page', page);
-    return searchParams.toString();
-}
+import { writePageToQuery } from '../src/hash-query.js';
 
 test('write page to existing search', assert => {
     // arrange
@@ -50,20 +41,23 @@ test('write page to existing search', assert => {
 
 
 // readFromQuery
-function readFromQuery(query) {
-    const searchParams = new URLSearchParams(query);
-    const result = {
-        searchTerm: searchParams.get('searchTerm'),
-        page: parseInt(searchParams.get('page')) || 1
-    };
-    return result;
-}
+import { readFromQuery } from '../src/hash-query.js';
 
 test('read options from query', assert => {
     // arrange
     const query = 'searchTerm=rick&page=6';
     // act
     const expected = { searchTerm: 'rick', page: 6 };
+    const result = readFromQuery(query);
+    // assert
+    assert.deepEqual(result, expected);
+});
+
+test('go to page one if not defined', assert => {
+    // arrange
+    const query = 'searchTerm=rick';
+    // act
+    const expected = { searchTerm: 'rick', page: 1 };
     const result = readFromQuery(query);
     // assert
     assert.deepEqual(result, expected);
