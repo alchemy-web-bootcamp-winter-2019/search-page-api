@@ -17,6 +17,7 @@ window.addEventListener('hashchange', () => {
     fetch(url)
         .then(response => response.json())
         .then(gifList => {
+            console.log(gifList);
             loadDisplay(gifList.data);
         });
     
