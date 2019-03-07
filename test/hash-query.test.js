@@ -2,12 +2,7 @@ const test = QUnit.test;
 
 QUnit.module('Hash Query');
 
-function writeSearchToQuery(existingQuery, searchTerm) {
-    const searchParams = new URLSearchParams(existingQuery);
-    searchParams.set('searchTerm', searchTerm);
-    searchParams.set('page', 1);
-    return searchParams.toString();
-}
+import { writeSearchToQuery } from '../src/hash-query.js';
 
 test('adding search to empty hash', assert => {
     //arrange
@@ -31,12 +26,7 @@ test('updating search with new term', assert => {
     assert.equal(results, 'searchTerm=alien&page=1');
 });
     
-
-function updatePageQuery(existingQuery, page) {
-    const searchParams = new URLSearchParams(existingQuery);
-    searchParams.set('page', page);
-    return searchParams.toString();
-}
+import { updatePageQuery } from '../src/hash-query.js';
 
 test('changing page number without changing search term', assert => {
     //arrange
@@ -49,15 +39,7 @@ test('changing page number without changing search term', assert => {
     assert.equal(results, 'searchTerm=human&page=3');
 });
 
-function readFromQuery(query) {
-    const searchParams = new URLSearchParams(query);
-    const pageNumber = parseInt(searchParams.get('page') || 1);
-    const results = {
-        searchTerm: searchParams.get('searchTerm'),
-        page: pageNumber
-    };
-    return results;
-}
+import { readFromQuery } from '../src/hash-query.js';
 
 test('read options from query', assert => {
     //arrange

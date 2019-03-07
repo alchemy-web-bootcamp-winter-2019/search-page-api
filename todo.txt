@@ -5,7 +5,6 @@
 
 1.5. TDD movie template function, create function forEach movie to append to movieContainer
 
-------------------------------------
 
 2. hash-query.test.js
     -write test for adding search to empty hash (local url)
@@ -30,6 +29,7 @@
     -test: read options from query
     -test: if query has no page, then return page 1
     -the three functions get moved into hash-query src file
+------------------------------------
 
 3. search-component.js
     -get search form by ID
