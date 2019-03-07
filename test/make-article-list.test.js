@@ -22,11 +22,11 @@ test('make list of articles from template', assert => {
     
     const expected = `
     <li>
-                <img src="${article.urlToImage}" onerror="this.onerror=null;this.src='https://ak6.picdn.net/shutterstock/videos/1418746/thumb/5.jpg';">
-                <h2>Coinbase users can now withdraw Bitcoin SV following BCH fork</h2>
-                <p>by Romain Dillet</p>
-                <p>If you’re a Coinbase user, you may have seen some new tokens on your account. The Bitcoin Cash chain split into two different chains back in November. It means that if you held Bitcoin Cash on November 15, you became the lucky owner of Bitcoin SV and Bitcoin …</p>
-                <p>Read more on <a href="http://techcrunch.com/2019/02/15/coinbase-users-can-now-withdraw-bitcoin-sv-following-bch-fork/">TechCrunch</a>.</p>
+                <section class="article-img"><img src="${article.urlToImage}" onerror="this.onerror=null;this.src='https://ak6.picdn.net/shutterstock/videos/1418746/thumb/5.jpg';"></section>
+                <section class="article-info"><h2 class="article-title">Coinbase users can now withdraw Bitcoin SV following BCH fork</h2>
+                <p class="article-author">by Romain Dillet</p>
+                <p class="article-description">If you’re a Coinbase user, you may have seen some new tokens on your account. The Bitcoin Cash chain split into two different chains back in November. It means that if you held Bitcoin Cash on November 15, you became the lucky owner of Bitcoin SV and Bitcoin …</p>
+                <p class="article-source-link">Read more: <a target="blank" href="http://techcrunch.com/2019/02/15/coinbase-users-can-now-withdraw-bitcoin-sv-following-bch-fork/">TechCrunch</a></p></section>
             </li>`;
 
     const result = makeArticleList(article);

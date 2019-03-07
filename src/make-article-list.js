@@ -1,11 +1,11 @@
 export function makeArticleList(article) {
     const html = `
     <li>
-                <img src="${article.urlToImage}" onerror="this.onerror=null;this.src='https://ak6.picdn.net/shutterstock/videos/1418746/thumb/5.jpg';">
-                <h2>${article.title}</h2>
-                <p>by ${article.author}</p>
-                <p>${article.description}</p>
-                <p>Read more on <a href="${article.url}">${article.source.name}</a>.</p>
+                <section class="article-img"><img src="${article.urlToImage}" onerror="this.onerror=null;this.src='https://ak6.picdn.net/shutterstock/videos/1418746/thumb/5.jpg';"></section>
+                <section class="article-info"><h2 class="article-title">${article.title}</h2>
+                <p class="article-author">by ${article.author}</p>
+                <p class="article-description">${article.description}</p>
+                <p class="article-source-link">Read more: <a target="blank" href="${article.url}">${article.source.name}</a></p></section>
             </li>`;
     const template = document.createElement('template');
     template.innerHTML = html;

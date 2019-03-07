@@ -4,6 +4,7 @@ import { queryToObject } from './hash-query.js';
 import { makeSearchArticlesURL } from './make-search-api-url.js';
 import { updatePaging } from './pagination-component.js';
 import './pagination-component.js';
+import { mailPage } from './mail-to-friend-component.js';
 
 updateSearchTerm();
 
@@ -18,3 +19,7 @@ window.addEventListener('hashchange', () => {
             updatePaging(queryOptions.page, response.totalResults);
         });
 });
+
+mailPage();
+
+
