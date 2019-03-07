@@ -31,22 +31,7 @@ function loadQuery() {
             updatePagingInfo(pagingInfo);
         })
         .catch((error) => {
-            // eslint-disable-next-line no-console
             console.log(error);
-            // console.log(error);
-            // console.log(body);
-            // loadCharacters([
-            //     {
-            //         name: 'no results',
-            //         image: '',
-            //         status: ''
-            //     }
-            // ]);
-            // const pagingInfo = {
-            //     totalPages: 0,
-            // };
-            // updatePagingInfo(pagingInfo);
-            //catch null with if statement, create template that loads up an error screen
         });
 }
 
