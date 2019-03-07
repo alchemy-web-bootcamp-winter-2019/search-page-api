@@ -24,3 +24,8 @@ impliment write filter and write page to index
 write make url function in tdd
 
 create hashchange event listener on index.js
+
+make loadCharacters 
+    - while to remove old character search
+    - for each character call make html
+        - appendChildren

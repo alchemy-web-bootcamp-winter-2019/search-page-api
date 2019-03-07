@@ -13,3 +13,16 @@ export function makeCharacterHtml(characterObject) {
     template.innerHTML = html;
     return template.content;
 }
+
+const characterList = document.getElementById('character-list');
+
+export default function loadCharacters(characterArray) {
+    while(characterList.children.length > 0) {
+        characterList.lastElementChild.remove();
+    }
+
+    characterArray.forEach(character => {
+        const dom = makeCharacterHtml(character);
+        characterList.appendChild(dom);
+    });
+}
