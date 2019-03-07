@@ -21,7 +21,7 @@ window.addEventListener('hashchange', () => {
         .then(body => {
             loadCharacters(body.results);
             const pagingInfo = {
-                page: body.info.page,
+                page: body.page,
                 totalPages: body.info.pages
             };
             updatePagingInfo(pagingInfo);

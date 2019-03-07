@@ -16,18 +16,15 @@ nextButton.addEventListener('click', () => {
     updatePage();
 });
 
-
-export function updatePagingInfo(pagingInfo) {
-    currentPageNumber = pagingInfo.page;
-    currentPage.textContent = currentPageNumber;
-    totalPages.textContent = pagingInfo.totalPages;
-    nextButton.disabled = currentPageNumber === pagingInfo.totalPages;
-    previousButton.disabled = currentPageNumber === 1;
-    console.log(currentPage);
-}
-
 export default function updatePage() {
     const existingQuery = window.location.hash.slice(1);
     const newQuery = writePageToQuery(existingQuery, currentPageNumber);
     window.location.hash = newQuery;
+}
+
+export function updatePagingInfo(pagingInfo) {
+    currentPage.textContent = currentPageNumber;
+    totalPages.textContent = pagingInfo.totalPages;
+    nextButton.disabled = currentPageNumber === pagingInfo.totalPages;
+    previousButton.disabled = currentPageNumber === 1;
 }
