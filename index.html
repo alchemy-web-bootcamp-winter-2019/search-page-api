@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <title>Rick and Morty Characters</title>
+</head>
+<body>
+    <header>
+        <h1>Rick and Morty Characters Database</h1>
+    </header>
+
+    <main>
+        <h2>Search by Species</h2>
+
+        <section id="search-container">
+            <form id="search-form">
+                <input type="text" name="search" placeholder="Enter Species Type">
+                <button>Search</button>
+            </form>
+        </section>
+
+        <section id="paging-container">
+            <button>Previous</button>
+            <p>Page <span id="current-page">1</span> of <span id="total-pages">10</span></p>
+            <button>Next</button>
+        </section>
+
+        <section id="character-list-container">
+            <div class="character-container">
+                <h3 class="character-info">Toxic Rick</h3>
+                <img src="https://rickandmortyapi.com/api/character/avatar/361.jpeg" alt="Toxic Rick" class="character-info">
+                <p class="character-info">Status: Dead</p>
+                <p class="character-info">Species: Humanoid</p>
+            </div>
+            <div class="character-container">
+                <h3 class="character-info">Toxic Rick</h3>
+                <img src="https://rickandmortyapi.com/api/character/avatar/361.jpeg" alt="Toxic Rick" class="character-info">
+                <p class="character-info">Status: Dead</p>
+                <p class="character-info">Species: Humanoid</p>
+            </div>
+            <div class="character-container">
+                <h3 class="character-info">Toxic Rick</h3>
+                <img src="https://rickandmortyapi.com/api/character/avatar/361.jpeg" alt="Toxic Rick" class="character-info">
+                <p class="character-info">Status: Dead</p>
+                <p class="character-info">Species: Humanoid</p>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+
+    </footer>
+
+    <script type="module" src="./src/index.js"></script>
+</body>
+</html>
