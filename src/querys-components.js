@@ -10,4 +10,10 @@ export function writeLimitToQuery(existingQuery, limit) {
     return limitParams.toString();
 }
 
-// waaaayyy to far ahead
+export function readFromQuery(currentQuery) {
+    const searchParams = new URLSearchParams(currentQuery);
+    const limit = searchParams.get('limit');
+    const page = searchParams.get('page');
+    const searchParamsObject = { limit: parseInt(limit), page: parseInt(page) };
+    return searchParamsObject;
+}

@@ -1,4 +1,4 @@
-import { writeLimitToQuery, writePageToQuery } from '../src/querys-components.js'; 
+import { writeLimitToQuery, writePageToQuery, readFromQuery } from '../src/querys-components.js'; 
 
 const test = QUnit.test;
 
@@ -28,14 +28,6 @@ test('write number of cats limit to query', assert => {
     //assert
     assert.equal(result, expected);
 });
-
-function readFromQuery(currentQuery) {
-    const searchParams = new URLSearchParams(currentQuery);
-    const limit = searchParams.get('limit');
-    const page = searchParams.get('page');
-    const searchParamsObject = { limit: parseInt(limit), page: parseInt(page) };
-    return searchParamsObject;
-}
 
 test('read existing query', assert => {
     // arrange
