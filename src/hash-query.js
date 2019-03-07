@@ -19,7 +19,7 @@ export function writePageToQuery(existingQuery, page) {
 export function readFromQuery(existingQuery) {
     const searchParams = new URLSearchParams(existingQuery);
     const searchOptions = {
-        name: searchParams.get('name'),
+        name: searchParams.get('name') ? searchParams.get('name') : '',
         colors: searchParams.get('colors') ? searchParams.get('colors').split(',') : [],
         page: Number(searchParams.get('page')) 
     };

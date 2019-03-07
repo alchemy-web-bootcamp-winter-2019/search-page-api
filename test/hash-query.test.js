@@ -93,3 +93,17 @@ test('Make search options with colors from existing query', assert => {
     // assert
     assert.deepEqual(result, expected);
 });
+
+test('Make search options with colors and no name from existing query', assert => {
+    // arrange
+    const existingQuery = 'page=2&colors=red%2Cblack';
+    const expected = {
+        name: '',
+        colors: ['red', 'black'],
+        page: 2
+    };
+    // act
+    const result = readFromQuery(existingQuery);
+    // assert
+    assert.deepEqual(result, expected);
+});
