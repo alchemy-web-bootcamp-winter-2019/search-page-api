@@ -12,3 +12,6 @@ document.addEventListener('submit', event => {
     window.location.hash = newQuery;
 });
 
+export default function updateSearchTerm(searchTerm) {
+    searchTermInput.value = searchTerm;
+}
