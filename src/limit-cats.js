@@ -1,5 +1,5 @@
 import { writeLimitToQuery, writePageToQuery } from './querys-components.js';
-import { resetPageNumber } from './index.js';
+import { resetPageNumber } from './pagnation-component.js';
 
 const limitNode = document.getElementById('text-input');
 const generateNode = document.getElementById('generate-button');
