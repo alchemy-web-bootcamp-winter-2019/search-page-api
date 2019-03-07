@@ -45,6 +45,6 @@ export function loadPageInfo(totalQuotesNumber, queryOptions){
     currentPageNode.textContent = queryOptions.page;
     const totalPagesNumber = Math.ceil(totalQuotesNumber / PER_PAGE);
     totalPagesNode.textContent = totalPagesNumber;
-    nextButton.disabled = queryOptions.page === totalPagesNumber;
-    previousButton.disabled = queryOptions.page === 1;
+    nextButton.disabled = queryOptions.page >= totalPagesNumber;
+    previousButton.disabled = queryOptions.page <= 1;
 }
