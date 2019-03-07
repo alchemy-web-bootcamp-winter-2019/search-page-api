@@ -1,29 +1,8 @@
+import makeCharacterDetailTemplate from '../src/character-detail-template.js';
+
 const test = QUnit.test;
 
 QUnit.module('character detail');
-
-function makeCharacterDetailTemplate(character) {
-    const template = document.createElement('template');
-    template.innerHTML = `
-        <div>
-            <img src="${character.image}">
-            <dt>Status:</dt>
-            <dd id="status">${character.status}</dd>
-            <dt>Species:</dt>
-            <dd>${character.species}</dd>
-            <dt>Type:</dt>
-            <dd>${character.type}</dd>
-            <dt>Gender:</dt>
-            <dd>${character.gender}</dd>
-            <dt>Origin:</dt>
-            <dd>${character.origin.name}</dd>
-            <dt>Location:</dt>
-            <dd>${character.location.name}</dd>
-        </div>
-    `;
-
-    return template.content;
-}
 
 test('make character detail page html', assert => {
 

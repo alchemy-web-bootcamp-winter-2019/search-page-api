@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Character Detail</title>
+    <link rel="stylesheet" href="main.css">
 </head>
 <body>
     <header>
@@ -12,48 +13,25 @@
     </header>
 
     <main>
-
         <section id="character-info">
-            <img src="https://rickandmortyapi.com/api/character/avatar/361.jpeg">
-            <dt>Status:</dt>
-            <dd id="status">Dead</dd>
-            <dt>Species:</dt>
-            <dd>Humanoid</dd>
-            <dt>Type:</dt>
-            <dd>Rick's Toxic Side</dd>
-            <dt>Gender:</dt>
-            <dd>Male</dd>
-            <dt>Origin:</dt>
-            <dd>Alien Spa</dd>
-            <dt>Location:</dt>
-            <dd>Earth</dd>
+            <div>
+                <img src="https://rickandmortyapi.com/api/character/avatar/361.jpeg">
+                <dt>Status:</dt>
+                <dd id="status">Dead</dd>
+                <dt>Species:</dt>
+                <dd>Humanoid</dd>
+                <dt>Type:</dt>
+                <dd>Rick's Toxic Side</dd>
+                <dt>Gender:</dt>
+                <dd>Male</dd>
+                <dt>Origin:</dt>
+                <dd>Alien Spa</dd>
+                <dt>Location:</dt>
+                <dd>Earth</dd>
+            </div>
         </section>
-
     </main>
+
+    <script type="module" src="./src/character.js"></script>
 </body>
 </html>
-
-
-
-<!-- const character = {
-    'id': 361,
-    'name': 'Toxic Rick',
-    'status': 'Dead',
-    'species': 'Humanoid',
-    'type': 'Rick\'s Toxic Side',
-    'gender': 'Male',
-    'origin': {
-        'name': 'Alien Spa',
-        'url': 'https://rickandmortyapi.com/api/location/64'
-    },
-    'location': {
-        'name': 'Earth',
-        'url': 'https://rickandmortyapi.com/api/location/20'
-    },
-    'image': 'https://rickandmortyapi.com/api/character/avatar/361.jpeg',
-    'episode': [
-        'https://rickandmortyapi.com/api/episode/27'
-    ],
-    'url': 'https://rickandmortyapi.com/api/character/361',
-    'created': '2018-01-10T18:20:41.703Z'
-}; -->
