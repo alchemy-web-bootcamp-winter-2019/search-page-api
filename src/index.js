@@ -5,6 +5,7 @@ import { makeSearchArticlesURL } from './make-search-api-url.js';
 import { updatePaging } from './pagination-component.js';
 import './pagination-component.js';
 import { mailPage } from './mail-to-friend-component.js';
+import './sort-component.js';
 
 updateSearchTerm();
 
