@@ -27,10 +27,10 @@ function loadQuery() {
         prompt.classList.add('hidden');
     }
 
-    // fetch(url)
-    //     .then(response => response.json())
-    //     .then(result => {
-    //         loadQuotes(result._embedded.quotes);
-    //         loadPageInfo(result.total, queryOptions);
-    //     });
+    fetch(url)
+        .then(response => response.json())
+        .then(result => {
+            loadQuotes(result._embedded.quotes);
+            loadPageInfo(result.total, queryOptions);
+        });
 }
