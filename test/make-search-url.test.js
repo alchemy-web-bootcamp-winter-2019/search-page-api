@@ -6,7 +6,7 @@ QUnit.module(' Module name');
 
 test('Test name', assert => {
     // Arrange
-    const expected = 'https://api.tronalddump.io/search/quote?query=obama&page=1&size=9';
+    const expected = 'https://cors-anywhere.herokuapp.com/https://api.tronalddump.io/search/quote?query=obama&page=1&size=9';
     const queryOptions = {
         searchTerm: 'obama',
         page: 1
