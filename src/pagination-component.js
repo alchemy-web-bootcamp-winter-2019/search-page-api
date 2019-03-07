@@ -6,7 +6,6 @@ const nextButton = document.getElementById('next-button');
 export function calculatePages(paginateObject) {
     const currentPage = Math.floor((paginateObject.offset / paginateObject.count)) + 1;
     const totalPages = Math.ceil(paginateObject.total_count / paginateObject.count);
-    
     return {
         currentPage: currentPage,
         totalPages: totalPages
