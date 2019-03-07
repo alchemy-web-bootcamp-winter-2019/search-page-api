@@ -1,4 +1,5 @@
 import loadCharacters from './load-characters.js';
+//import { updateSearchTerm } from './search-component.js';
 
 
 //loads all characters
@@ -8,3 +9,4 @@ fetch('https://rickandmortyapi.com/api/character/?name=rick&page=4')
         console.log(body);
         loadCharacters(body.results);
     });
+
