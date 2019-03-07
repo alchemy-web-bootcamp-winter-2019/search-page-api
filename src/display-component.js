@@ -28,8 +28,8 @@ export default function loadQuotes(quoteList){
 }
 
 function clearRows(){
-    while(quoteListUl.children.length > 0){
-        quoteListUl.lastElementChild.remove();
+    while(quoteListUl.firstChild){
+        quoteListUl.firstChild.remove();
     }
 }
 
