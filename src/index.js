@@ -20,6 +20,17 @@ function loadQuery() {
                 totalPages: body.info.pages,
             };
             updatePagingInfo(pagingInfo);
+        })
+        .catch((error) => {
+            console.log('no results');
+            // console.log(error);
+            // console.log(body);
+            // loadCharacters([]);
+            // const pagingInfo = {
+            //     totalPages: 0,
+            // };
+            // updatePagingInfo(pagingInfo);
+            //catch null with if statement, create template that loads up an error screen
         });
 }
 
