@@ -24,11 +24,13 @@ function loadQuery() {
             return response.json();
         })
         .then(body => {
-            loadCharacters(body.results);
-            const pagingInfo = {
-                totalPages: body.info.pages,
-            };
-            updatePagingInfo(pagingInfo);
+            if(body.results) {
+                loadCharacters(body.results);
+                const pagingInfo = {
+                    totalPages: body.info.pages,
+                };
+                updatePagingInfo(pagingInfo);
+            }
         })
         .catch((error) => {
             console.log(error);
