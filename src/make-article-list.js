@@ -5,7 +5,7 @@ export function makeArticleList(article) {
                 <section class="article-info"><h2 class="article-title">${article.title}</h2>
                 <p class="article-author">by ${article.author}</p>
                 <p class="article-description">${article.description}</p>
-                <p class="article-source-link">Read more: <a target="blank" href="${article.url}">${article.source.name}</a></p></section>
+                <p class="article-source-link">Read more: <a target="blank" href="${article.url}">${article.source.name}</a> | <a href="mailto:?subject=FWD:${article.title}&body=Thought%20you%20might%20enjoy%20this%20article:%20${article.url}">Email article</a></p></section>
             </li>`;
     const template = document.createElement('template');
     template.innerHTML = html;

@@ -26,7 +26,7 @@ test('make list of articles from template', assert => {
                 <section class="article-info"><h2 class="article-title">Coinbase users can now withdraw Bitcoin SV following BCH fork</h2>
                 <p class="article-author">by Romain Dillet</p>
                 <p class="article-description">If you’re a Coinbase user, you may have seen some new tokens on your account. The Bitcoin Cash chain split into two different chains back in November. It means that if you held Bitcoin Cash on November 15, you became the lucky owner of Bitcoin SV and Bitcoin …</p>
-                <p class="article-source-link">Read more: <a target="blank" href="http://techcrunch.com/2019/02/15/coinbase-users-can-now-withdraw-bitcoin-sv-following-bch-fork/">TechCrunch</a></p></section>
+                <p class="article-source-link">Read more: <a target="blank" href="http://techcrunch.com/2019/02/15/coinbase-users-can-now-withdraw-bitcoin-sv-following-bch-fork/">TechCrunch</a> | <a href="mailto:?subject=FWD:${article.title}&amp;body=Thought%20you%20might%20enjoy%20this%20article:%20${article.url}">Email article</a></p></section>
             </li>`;
 
     const result = makeArticleList(article);

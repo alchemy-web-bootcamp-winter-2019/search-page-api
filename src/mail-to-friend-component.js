@@ -9,8 +9,3 @@ export function mailPage() {
 
     linkNode.href = mailPage;
 }
-
-
-function mailArticle() {
-
-}
