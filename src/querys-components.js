@@ -17,3 +17,11 @@ export function readFromQuery(currentQuery) {
     const searchParamsObject = { limit: parseInt(limit), page: parseInt(page) };
     return searchParamsObject;
 }
+
+export function makeAPIurl(searchParamsObject) {
+    const baseURL = 'https://api.thecatapi.com/v1/images/search?';
+    const APIurl = new URL(baseURL);
+    APIurl.searchParams.set('limit', searchParamsObject.limit);
+    APIurl.searchParams.set('page', searchParamsObject.page);
+    return APIurl.toString();
+}

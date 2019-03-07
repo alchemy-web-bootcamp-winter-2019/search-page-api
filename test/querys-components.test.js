@@ -1,4 +1,4 @@
-import { writeLimitToQuery, writePageToQuery, readFromQuery } from '../src/querys-components.js'; 
+import { writeLimitToQuery, writePageToQuery, readFromQuery, makeAPIurl } from '../src/querys-components.js'; 
 
 const test = QUnit.test;
 
@@ -38,6 +38,19 @@ test('read existing query', assert => {
     const currentQuery = 'limit=15&page=5&order=Desc';
     // act
     const result = readFromQuery(currentQuery);
+    // assert
+    assert.deepEqual(result, expected);
+});
+
+test('make api url test', assert => {
+    // arrange
+    const expected = 'https://api.thecatapi.com/v1/images/search?limit=15&page=5';
+    const searchParamsObject = {
+        limit: 15,
+        page: 5
+    };
+    // act
+    const result = makeAPIurl(searchParamsObject);
     // assert
     assert.deepEqual(result, expected);
 });
