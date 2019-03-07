@@ -5,5 +5,10 @@ export default function searchCharacterUrl(queryOptions) {
     url.searchParams.set('name', queryOptions.searchTerm);
     url.searchParams.set('page', queryOptions.page);
 
+    const searchTerm = queryOptions.searchTerm;
+    if(!searchTerm) {
+        return '';
+    }
+
     return url.toString();
 }
