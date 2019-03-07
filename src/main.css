@@ -1,5 +1,66 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-family: 'Open Sans', sans-serif;
+    margin: 0px;
+    padding: 0px;
+}
+
+form {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 100px;
+    border-bottom: 1px solid lightgrey;
+}
+
+#input-field {
+    height: 90%;
+    width: 80%;
+    border: none;
+    font-family: 'Permanent Marker', cursive;
+    font-size: 92px;
+    flex-grow: 1;
+    text-align: right;
+    padding: 5px 35px 5px 5px;
+}
+
+input::placeholder {
+    color: rgb(235, 177, 177);
+}
+
+button {
+    background: none;
+    border: none;
+    height: 100%;
+    background: lightcoral;
+    padding: 5px;
+}
+
+button img {
+    height: 100%;
+    
+}
+
 #button-area {
     display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: white;
+    border-bottom: 1px solid lightgrey;
+}
+
+#button-area button {
+    height: 60px;
+    width: 50px;
+    color: white;
+    font-size: 36px;
+    font-family: 'Permanent Marker', cursive;
+}
+
+#page-number-area {
+    margin: 0px 25px;
 }
 
 #article-list {
@@ -23,4 +84,17 @@
 
 #article-list img {
     width: 100%;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    padding: 10px 0px;
+    color: lightcoral;
+}
+
+footer a {
+    color: rgb(245, 111, 111);
 }

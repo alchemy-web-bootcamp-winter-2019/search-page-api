@@ -4,28 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./src/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Permanent+Marker" rel="stylesheet">
     <title>News Database</title>
 </head>
 <body id="body">
     <header>
-        <h1>News Database</h1>
+        <form id="search-form">
+            <input type="text" placeholder="Search the news!" name="search-value" id="input-field">
+            <button><img alt="search icon" src="./assets/search-icon-white.png"></button>
+        </form>
     </header>
     <main>
-        <section>
-            <form id="search-form">
-                <input type="text" placeholder="Search the news!" name="search-value">
-                <button>Search</button>
-            </form>
             <section id="button-area">
                 <button id="previous-button"> &lt; </button>
-                <p>Page <span id="current-page"></span> of <span id="total-pages"></span></p>
+                <p id="page-number-area">Page <span id="current-page">0</span> of <span id="total-pages">0</span></p>
                 <button id="next-button"> &gt; </button>
             </section>
-        </section>
         <ul id="article-list"></ul>
     </main>
     <footer>
-        &copy; Ben Parisot 2019 with the help of <a href="https://newsapi.org">NewsAPI.org</a>.
+        &copy; Ben Parisot 2019 with the help of <a target="blank" href="https://newsapi.org">NewsAPI.org</a>.
     </footer>
     <script type="module" src="src/index.js"></script>
 </body>
