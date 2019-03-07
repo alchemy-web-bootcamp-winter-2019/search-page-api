@@ -1,1 +1,2 @@
-// fetch('https://rickandmortyapi.com/api/character/?page=12').then(response => response.json()).then(body => console.log(body));
+import './filter-components.js';
+

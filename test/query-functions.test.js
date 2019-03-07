@@ -1,14 +1,8 @@
 const test = QUnit.test;
 
 QUnit.module('query function tests');
-function writeFilterToQuery(existingQuery, filterOptions) {
-    const searchParams = new URLSearchParams(existingQuery);
-    searchParams.set('name', filterOptions.name);
-    searchParams.set('status', filterOptions.status);
-    searchParams.set('species', filterOptions.species);
-    searchParams.set('page', 1);
-    return searchParams.toString();
-}
+
+import { writeFilterToQuery } from '../src/query-functions.js';
 
 test('creates a query string with the filter name', assert => {
     //arrange
@@ -56,11 +50,7 @@ test('creates a query string with the filter name', assert => {
     assert.equal(result, expected);
 });
 
-function writePageToQuery(existingQuery, page) {
-    const searchParams = new URLSearchParams(existingQuery);
-    searchParams.set('page', page);
-    return searchParams.toString();
-}
+import { writePageToQuery } from '../src/query-functions.js';
 
 test('writes page to query', assert => {
     //arrange
@@ -75,16 +65,7 @@ test('writes page to query', assert => {
     assert.equal(result, expected);
 });
 
-function readFromQuery(queryOptions) {
-    const searchParams = new URLSearchParams(queryOptions);
-    const filterOptions = {
-        name: searchParams.get('name'),
-        status: searchParams.get('status'),
-        species: searchParams.get('species'),
-        page: parseInt(searchParams.get('page'))
-    };
-    return filterOptions;
-}
+import { readFromQuery } from '../src/query-functions.js';
 
 test('reads filter options', assert => {
     //arrange

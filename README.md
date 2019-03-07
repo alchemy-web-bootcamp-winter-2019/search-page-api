@@ -16,4 +16,8 @@ TDD Query Functions
     -add filter species to query
     -add page to query
     -read query
-    
+
+impliment write filter and write page to index
+    - event listener for form submit
+        - update url
+
