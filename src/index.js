@@ -1,4 +1,4 @@
-import loadCharacters from './load-characters.js';
+import loadCharacters, { noResults } from './load-characters.js';
 import { updateSearchTerm } from './search-component.js';
 import { readFromQuery } from './hash-query.js';
 import makeSearchUrl from './make-search-url.js';
@@ -14,10 +14,17 @@ function loadQuery() {
     
     fetch(url)
         .then(response => {
-            console.log(response.statusText);
+            if(!response.ok) {
+                noResults();
+                const pagingInfo = {
+                    totalPages: 1,
+                };
+                updatePagingInfo(pagingInfo);
+            }
             return response.json();
         })
         .then(body => {
+            console.log('body results length', body.info.pages);
             loadCharacters(body.results);
             const pagingInfo = {
                 totalPages: body.info.pages,
@@ -25,11 +32,17 @@ function loadQuery() {
             updatePagingInfo(pagingInfo);
         })
         .catch((error) => {
-            console.log('no results');
+            // eslint-disable-next-line no-console
             console.log(error);
             // console.log(error);
             // console.log(body);
-            // loadCharacters([]);
+            // loadCharacters([
+            //     {
+            //         name: 'no results',
+            //         image: '',
+            //         status: ''
+            //     }
+            // ]);
             // const pagingInfo = {
             //     totalPages: 0,
             // };
