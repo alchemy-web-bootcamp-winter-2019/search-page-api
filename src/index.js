@@ -15,11 +15,11 @@ function loadQuery() {
     const queryOptions = readFromQuery(existingQuery);
     
     const url = makeSearchUrl(queryOptions);
-    
+
     fetch(url)
         .then(response => response.json())
         .then(result => {
             loadQuotes(result._embedded.quotes);
-            loadPageInfo(result.total, queryOptions.page);
+            loadPageInfo(result.total, queryOptions);
         });
 }
