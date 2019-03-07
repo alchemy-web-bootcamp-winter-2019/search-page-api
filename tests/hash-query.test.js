@@ -1,15 +1,8 @@
+import { writeSearchToQuery } from '../src/hash-query.js';
+
 const test = QUnit.test;
 
 QUnit.module(' test url search params');
-
-function writeSearchToQuery(existingQuery, searchTerm) {
-    const searchParams = new URLSearchParams(existingQuery);
-    searchParams.set('name', searchTerm);
-    searchParams.set('page', 1);
-
-    return searchParams.toString();
-}
-
 
 test('add search params to empty query', assert => {
     const existingQuery = '';
@@ -21,11 +14,3 @@ test('add search params to empty query', assert => {
 
     assert.equal(result, expected);
 });
-
-
-// const existingQuery = '';
-// const searchTerm = 'star wars';
-// // act
-// const result = writeSearchToQuery(existingQuery, searchTerm);
-// // assert
-// assert.equal(result, 'searchTerm=star+wars&page=1');

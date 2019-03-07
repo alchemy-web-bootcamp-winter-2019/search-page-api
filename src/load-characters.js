@@ -9,3 +9,15 @@ export function makeCharacterTemplate(character) {
     `;
     return template.content;
 }
+
+const characterContainer = document.getElementById('character-container');
+
+export default function loadCharacters(characters) {
+    while(characterContainer.children.length > 0) {
+        characterContainer.lastElementChild.remove();
+    }
+    characters.forEach(character => {
+        const dom = makeCharacterTemplate(character);
+        characterContainer.appendChild(dom);
+    });
+}

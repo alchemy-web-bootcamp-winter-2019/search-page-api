@@ -1,1 +1,10 @@
-import makeCharacterTemplate from './load-characters.js',
+import loadCharacters from './load-characters.js';
+
+
+//loads all characters
+fetch('https://rickandmortyapi.com/api/character/?name=rick&page=4')
+    .then(response => response.json())
+    .then(body => {
+        console.log(body);
+        loadCharacters(body.results);
+    });
