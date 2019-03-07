@@ -16,3 +16,16 @@ test('given name and page return URL for fetch', assert => {
     // assert
     assert.equal(result, expected);
 });
+
+test('if no search option, return empty string', assert => {
+    // arrange
+    const expected = '';
+    const searchOptions = {
+        name: '',
+        page: 1
+    };
+    // act
+    const result = makeSearchNameURL(searchOptions); 
+    // assert
+    assert.equal(result, expected);
+});

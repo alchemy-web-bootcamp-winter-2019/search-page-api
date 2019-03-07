@@ -28,3 +28,7 @@ h2 {
 .pt {
     align-self: flex-end;
 }
+
+.hidden {
+    display: none;
+}
