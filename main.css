@@ -1,0 +1,68 @@
+body {
+    font-family: 'Oswald', sans-serif;
+    letter-spacing: 2px;
+}
+
+section {
+    padding: 10px;
+}
+
+#character-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.character {
+    margin: 5px;
+    border: 1px solid black;
+    text-align: center;
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+    border: 3px solid white;
+}
+
+.character:hover {
+    transform: scale(1.1);
+}
+
+.character img {
+    width: 80%;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+header a:hover {
+    color: hotpink;
+    font-size: 1.5em;
+}
+
+h2:hover {
+    font-size: 2em;
+    background: -webkit-linear-gradient(orange, fuchsia);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#character-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#character-info {
+    border: 1px solid black;
+    background: green;
+}
+
+dt {
+    font-weight: bold;
+}
+
+#return {
+    font-weight: bold;
+}
+
