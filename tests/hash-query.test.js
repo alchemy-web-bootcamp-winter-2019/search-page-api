@@ -45,5 +45,26 @@ test('write page to existing search', assert => {
     // act
     const result = writePageToQuery(existingQuery, page);
     // assert
-    assert.equal(result, 'searchTerm=rick&page=2')
+    assert.equal(result, 'searchTerm=rick&page=2');
+});
+
+
+// readFromQuery
+function readFromQuery(query) {
+    const searchParams = new URLSearchParams(query);
+    const result = {
+        searchTerm: searchParams.get('searchTerm'),
+        page: parseInt(searchParams.get('page')) || 1
+    };
+    return result;
+}
+
+test('read options from query', assert => {
+    // arrange
+    const query = 'searchTerm=rick&page=6';
+    // act
+    const expected = { searchTerm: 'rick', page: 6 };
+    const result = readFromQuery(query);
+    // assert
+    assert.deepEqual(result, expected);
 });
