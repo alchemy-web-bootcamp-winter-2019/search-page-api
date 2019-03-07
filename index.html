@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./src/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <title>Rick and Morty Peeps</title>
+</head>
+
+<body>
+    <header>
+        <h1>Rick and Morty Characters</h1>
+    </header>
+
+    <main>
+        <form id="form">
+            <input type="search" name="search-bar">
+            <button>Search</button>
+        </form>
+
+        <section>
+            <button id="previous-button">&lt; Previous</button>
+            <span id="current-page">1</span>
+            of
+            <span id="total-pages">100</span>
+            <button id="next-button">Next &gt;</button>
+        </section>
+
+        <ul id="character-container"></ul>
+    </main>
+</body>
+<script type="module" src="./src/index.js"></script>
+</html>
