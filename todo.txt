@@ -38,7 +38,6 @@
         - make a variable existingQuery = window.location.hash.slice(1);
         - make a variable newQuery that calls writeSearchToQuery 
         - change the window location to the newQuery
-------------------------------------
 
 4. index.js
     - create an event listener for hash change
@@ -55,6 +54,7 @@
             - make variable url (results) = makeSearchMovieUrl(queryOptions);
     - function makeSearchMovieUrl(queryOptions) -- this one is pretty complicated, reference the js file
     -move function to its own module
+------------------------------------
 
 6. fetch and load movies - index.js -- inside even listener
     - make variable url = makeSearchMovieUrl(queryOptions);
