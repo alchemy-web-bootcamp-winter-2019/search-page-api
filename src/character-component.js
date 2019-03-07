@@ -14,6 +14,10 @@ export default function makeHtmlTemplate(characterInformation) {
 const characterList = document.getElementById('character-list');
 
 export function loadCharacters(characters) {
+    while(characterList.children.length > 0) {
+        characterList.lastElementChild.remove();
+    }
+
     characters.forEach(characterInformation => {
         const dom = makeHtmlTemplate(characterInformation);
         characterList.appendChild(dom);
