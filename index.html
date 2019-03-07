@@ -17,7 +17,8 @@
     <main>
         <form id="filter-form">
             <select id="species" name="species">
-                <option value="" disabled selected>Filter by Species</option>
+                <option value="" selected>Filter by Species</option>
+                <option value="">No Filter</option>
                 <option value="Human">Human</option>
                 <option value="Humanoid">Humanoid</option>
                 <option value="Alien">Alien</option>
@@ -26,7 +27,8 @@
                 <option value="Animal">Animal</option>
             </select>
             <select id="status" name="status">
-                    <option value="" disabled selected>Filter by Status</option>
+                <option value="" selected>Filter by Status</option>
+                <option value="">No Filter</option>
                 <option value="Alive">Alive</option>
                 <option value="Dead">Dead</option>
                 <option value="Unknown">Unknown</option>
@@ -42,7 +44,8 @@
         </section>
 
         <section>
-            <ul id="character-list"></ul>
+            <ul id="character-list">
+            </ul>
         </section>
     </main>
     <footer></footer>

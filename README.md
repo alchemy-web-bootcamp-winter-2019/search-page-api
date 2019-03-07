@@ -29,3 +29,7 @@ make loadCharacters
     - while to remove old character search
     - for each character call make html
         - appendChildren
+
+Make paging TDD
+    imports paging info object
+    outputs 

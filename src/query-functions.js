@@ -15,7 +15,6 @@ export function writePageToQuery(existingQuery, page) {
 
 export function readFromQuery(queryOptions) {
     const slice = queryOptions.slice(1);
-    console.log(slice, 'read');
     const searchParams = new URLSearchParams(slice);
     const filterOptions = {
         name: searchParams.get('name'),
