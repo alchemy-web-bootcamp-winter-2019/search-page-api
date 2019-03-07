@@ -5,9 +5,11 @@ import makeSearchUrl from './make-search-url.js';
 
 import './search-component.js';
 
-// loadQuotes(quoteList);
+loadQuery();
 
-window.addEventListener('hashchange', () => {
+window.addEventListener('hashchange', loadQuery);
+
+function loadQuery() {
     const existingQuery = window.location.hash.slice(1);
 
     const queryOptions = readFromQuery(existingQuery);
@@ -18,5 +20,4 @@ window.addEventListener('hashchange', () => {
         .then(response => response.json())
         .then(result => result._embedded.quotes)
         .then(loadQuotes);
-
-});
+}
