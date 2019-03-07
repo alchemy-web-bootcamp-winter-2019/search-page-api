@@ -1,6 +1,6 @@
 import loadCats from './create-cat-component.js';
 import './limit-cats.js';
-import { writePageToQuery } from './querys-components.js';
+import { writePageToQuery, makeAPIurl, readFromQuery } from './querys-components.js';
 
 // const url = 'https://api.thecatapi.com/v1/images/search?limit=15&page=0&order=Desc';
 const nextButton = document.getElementById('next-button');
@@ -24,9 +24,14 @@ previousButton.addEventListener('click', () => {
     window.location.hash = newQuery;
 });
 
-fetch(url)
-    .then(response => response.json())
-    .then(body => {
-        // console.log('fetch body', body);
-        loadCats(body);
-    });
+window.addEventListener('change', () => {
+    const currentQuery = window.location.hash;
+    const searchParamsObject = readFromQuery(currentQuery);
+    const url = makeAPIurl(searchParamsObject);
+    
+    fetch(url)
+        .then(response => response.json())
+        .then(body => {
+            loadCats(body);
+        });
+});
