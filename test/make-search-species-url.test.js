@@ -9,6 +9,7 @@ test('Update char url based on search', assert => {
         species: 'human',
         page: 1
     };
+
     // act
     const result = makeSearchSpeciesUrl(queryOptions);
     // assert
