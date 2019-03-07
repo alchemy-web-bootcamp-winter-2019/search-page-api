@@ -65,3 +65,7 @@ h2 {
     padding: 5px;
     text-align: right;
 }
+
+.hidden {
+    visibility: hidden;
+}
