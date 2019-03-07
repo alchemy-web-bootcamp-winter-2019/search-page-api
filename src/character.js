@@ -15,17 +15,17 @@ const name = document.getElementById('name');
 fetch(url)
     .then(response => {
         if(!response.ok) {
-        //handle error
+            window.location = './index.html';
         }
         return response.json();
     })
-    .then(body => {
-        console.log(body);
-        const dom = makeCharacterDetailTemplate(body);
+    .then(character => {
+        const dom = makeCharacterDetailTemplate(character);
         characterInfo.appendChild(dom);
-        name.textContent = body.name;
+        name.textContent = character.name;
     })
     .catch((error) => {
+        // eslint-disable-next-line no-console
         console.log(error);
     });
 
