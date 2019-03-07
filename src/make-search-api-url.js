@@ -7,5 +7,6 @@ export function makeSearchArticlesURL(queryOptions) {
     url.searchParams.set('apiKey', API_KEY);
     url.searchParams.set('page', queryOptions.page);
     url.searchParams.set('language', 'en');
+    url.searchParams.set('sortBy', queryOptions.sortBy);
     return url.toString();
 }

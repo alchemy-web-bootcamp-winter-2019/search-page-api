@@ -9,7 +9,7 @@
 </head>
 <body id="body">
     <header>
-        <img id="news-logo" alt="news logo" src="assets/news-logo.svg">
+        <a href="/index.html"><img id="news-logo" alt="news logo" src="assets/news-logo.svg"></a>
         <form id="search-form" class="blinking-cursor">
             <input type="text"  name="search-value" placeholder="Enter your search" id="input-field"><p></p>
             <button><img alt="search icon" src="./assets/search-icon-white.png"></button>
@@ -17,9 +17,10 @@
     </header>
     <main>
             <section id="button-area">
-                <p>Sort by:</p>
-                <input type="checkbox" id="relevancy" name="relevancy" value="relevancy"> Relevancy<br>
-                <input type="checkbox" id="popularity" name="popularity" value="popularity"> Popularity<br>
+                <p>Show me:</p>
+                <input type="radio" id="published-at" name="sort" value="published-at"> Most Recent<br>
+                <input type="radio" id="relevancy" name="sort" value="relevancy"> Most Relevant<br>
+                <input type="radio" id="popularity" name="sort" value="popularity"> Most Popular<br>
                 <a href="" id="mail-link">Email this page to a friend!</a>
                 <button id="previous-button"> &lt; </button>
                 <p id="page-number-area">Page <span id="current-page">0</span> of <span id="total-pages">0</span></p>

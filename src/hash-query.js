@@ -11,12 +11,20 @@ export function pageToURL(existingQuery, newPage) {
     return searchParams.toString();
 }
 
+export function sortToURL(existingQuery, sort) {
+    const searchParams = new URLSearchParams(existingQuery);
+    searchParams.set('sortBy', sort);
+    return searchParams.toString();
+}
+
 export function queryToObject(existingQuery) {
     const searchParams = new URLSearchParams(existingQuery);
     const q = searchParams.get('q');
     const page = parseInt(searchParams.get('page'));
+    const sortBy = searchParams.get('sortBy');
     return {
         q: q,
-        page: page
+        page: page,
+        sortBy: sortBy
     };
 }

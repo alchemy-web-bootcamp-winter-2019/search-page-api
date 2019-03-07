@@ -13,6 +13,8 @@ window.addEventListener('hashchange', () => {
     const query = window.location.hash.slice(1);
     const queryOptions = queryToObject(query);
     const URL = makeSearchArticlesURL(queryOptions);
+    console.log('url', URL);
+    console.log('query options', queryOptions);
     fetch(URL)
         .then(response => response.json())
         .then(response => {
