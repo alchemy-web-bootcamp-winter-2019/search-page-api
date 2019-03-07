@@ -19,3 +19,20 @@ section {
 .character img {
     width: 80%;
 }
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    color: hotpink;
+    font-size: 2em;
+}
+
+h2:hover {
+    font-size: 2em;
+    background: -webkit-linear-gradient(orange, fuchsia);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
