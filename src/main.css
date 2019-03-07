@@ -14,21 +14,14 @@ body {
 }
 
 header {
+    display: flex;
     margin: 0px;
     padding: 0px;
     width: 100%;
 }
 
-h1 {
-    font-family: 'Permanent Marker', cursive;
-    font-size: 72px;
-    line-height: 1;
-    text-align: center;
-    color: white;
-    width: 100%;
-    background: lightcoral;
-    margin: 0px;
-    padding: 10px 0px;
+#news-logo {
+    height: 100px;
 }
 
 form {
@@ -44,7 +37,7 @@ form {
     width: 80%;
     border: none;
     font-family: 'Permanent Marker', cursive;
-    font-size: 92px;
+    font-size: 60px;
     flex-grow: 1;
     text-align: right;
     padding: 5px 35px 10px 5px;
@@ -56,36 +49,11 @@ input::placeholder {
     color: rgb(235, 177, 177);
 }
 
-.blinking-cursor {
-	position: relative;
-}
-.blinking-cursor p {
-	position: relative;
-	width: 5px;
-	height: 80%;
-	background-color: lightgray;
-	/* left: 5px; */
-    /* top: 10%; */
-    right: 20px;
-	animation-name: blink;
-	animation-duration: 1000ms;
-	animation-iteration-count: infinite;
-    opacity: 1;
-}
-  
-.blinking-cursor input:focus + i {
-	display: none;
-}
-
-@keyframes blink {
-	from { opacity: 1; }
-	to { opacity: 0; }
-}
-
 button {
     background: none;
     border: none;
     height: 100%;
+    width: 160px;
     background: lightcoral;
     padding: 5px;
 }
@@ -164,7 +132,7 @@ footer {
     width: 100%;
     text-align: center;
     padding: 10px 0px;
-    color: lightcoral;
+    color: rgb(240, 128, 128);
 }
 
 footer a {
