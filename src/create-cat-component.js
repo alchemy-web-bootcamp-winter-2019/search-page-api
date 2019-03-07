@@ -18,3 +18,7 @@ export default function loadCats(catsObject) {
         catGalleryNode.appendChild(dom);
     });
 }
+
+// 1. --- clearCats function => while(){.remove();}
+
+// 2. --- makeSearch function -> needs testing

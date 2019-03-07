@@ -6,10 +6,10 @@ const generateNode = document.getElementById('generate-button');
 
 generateNode.addEventListener('click', event => {
     event.preventDefault();
-    const currentQuery = window.location.hash;
+    const currentQuery = window.location.hash.slice(1);
     const catLimit = limitNode.value;
-    writeLimitToQuery(currentQuery, catLimit);
-   
+    const newQuery = writeLimitToQuery(currentQuery, catLimit);
+    window.location.has = newQuery;
 });
 
 window.addEventListener('hashchange', () => {

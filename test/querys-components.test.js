@@ -29,15 +29,23 @@ test('write number of cats limit to query', assert => {
     assert.equal(result, expected);
 });
 
-// function readFromQuery() {
+function readFromQuery(currentQuery) {
+    const searchParams = new URLSearchParams(currentQuery);
+    const limit = searchParams.get('limit');
+    const page = searchParams.get('page');
+    const searchParamsObject = { limit: parseInt(limit), page: parseInt(page) };
+    return searchParamsObject;
+}
 
-// }
-
-// test('read existing query', assert => {
-//     // arrange
-//     const expected = ;
-//     // act
-
-//     // assert
-//     assert.equal(result, expected);
-// });
+test('read existing query', assert => {
+    // arrange
+    const expected = {
+        limit: 15,
+        page: 5
+    };
+    const currentQuery = 'limit=15&page=5&order=Desc';
+    // act
+    const result = readFromQuery(currentQuery);
+    // assert
+    assert.deepEqual(result, expected);
+});

@@ -3,7 +3,7 @@ import './limit-cats.js';
 
 
 
-const url = 'https://api.thecatapi.com/v1/images/search?limit=15&page=0&order=Desc';
+// const url = 'https://api.thecatapi.com/v1/images/search?limit=15&page=0&order=Desc';
 
 fetch(url)
     .then(response => response.json())
