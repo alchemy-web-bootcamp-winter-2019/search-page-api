@@ -16,8 +16,8 @@ export function writePageToQuery(existingQuery, page) {
 export function readFromQuery(query) {
     const searchParams = new URLSearchParams(query);
     const result = {
-        name: searchParams.get('name'),
-        page: parseInt(searchParams.get('page'))
+        name: searchParams.get('name') || '',
+        page: parseInt(searchParams.get('page')) || 1
     };
     return result;
 }
