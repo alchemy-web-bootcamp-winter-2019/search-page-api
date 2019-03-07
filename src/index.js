@@ -17,14 +17,13 @@ function loadQuery() {
             if(!response.ok) {
                 noResults();
                 const pagingInfo = {
-                    totalPages: 1,
+                    totalPages: 1
                 };
                 updatePagingInfo(pagingInfo);
             }
             return response.json();
         })
         .then(body => {
-            console.log('body results length', body.info.pages);
             loadCharacters(body.results);
             const pagingInfo = {
                 totalPages: body.info.pages,

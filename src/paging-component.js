@@ -1,4 +1,4 @@
-import { writePageToQuery } from './hash-query.js';
+import { writePageToQuery, readFromQuery } from './hash-query.js';
 
 //update currentPage and totalPages display
 //add event listeners to buttons
@@ -23,7 +23,9 @@ nextButton.addEventListener('click', () => {
 });
 
 export default function updatePagingInfo(pagingInfo) {
+    const queryInfo = readFromQuery(window.location.hash.slice(1));
     totalPages.textContent = pagingInfo.totalPages;
+    currentPageNumber = queryInfo.page;
     currentPage.textContent = currentPageNumber;
     nextButton.disabled = currentPageNumber === pagingInfo.totalPages;
     previousButton.disabled = currentPageNumber === 1;

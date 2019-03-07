@@ -23,12 +23,10 @@ export default function loadCharacters(characters) {
 }
 
 export function noResults() {
-    console.log('this is the function');
     while(characterContainer.children.length > 0) {
         characterContainer.lastElementChild.remove();
     }
     const errorMsg = document.createElement('p');
     errorMsg.textContent = 'No Results';
     characterContainer.appendChild(errorMsg);
-
 }
