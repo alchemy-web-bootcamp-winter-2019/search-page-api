@@ -10,15 +10,15 @@ function loadQuery() {
 
     const searchOptions = readFromQuery(window.location.hash);
     const apiURL = makeSearchUrlFromQuery(searchOptions);
+    let pagingInfo ={};
     fetch(apiURL)
         .then(response => response.json())
         .then(body => {
             loadCharacters(body.results);
-            const pagingInfo = {
-                page: searchOptions.page,
+            pagingInfo = {
+                page: parseInt(searchOptions.page),
                 totalPages: body.info.pages
             };
-            console.log(pagingInfo);
             updatePaging(pagingInfo);})
             .catch(err => console.error(err));
 
