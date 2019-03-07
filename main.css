@@ -2,11 +2,17 @@
     display: flex;
     list-style-type: none;
     flex-wrap: wrap;
-    width: 800px;
+    width: 600px;
 }
 
 li {
     padding: 5px;
     border: 1px solid black;
     margin: 5px;
+    display: flex;
+
+}
+
+.hidden {
+    display: none;
 }

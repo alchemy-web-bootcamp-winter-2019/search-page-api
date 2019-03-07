@@ -9,6 +9,7 @@
 <body>
     <header>
        <h1>Giphy Finder</h1>
+       <a href="./index.html">Refresh Search</a>
     </header>
     <main>
         <form id="search-form">
@@ -17,11 +18,12 @@
                <button>Find A GIF</button>
             </label>
         </form>
-        <section id="pagination-buttons">
+        <section id="pagination-buttons" class="hidden">
             <button id="previous-button">Previous</button>
             <span>Page <span id="current-page"></span> of <span id="total-pages"></span></span>
             <button id="next-button">Next</button>
         </section>
+        <section id="start-message">Search for a GIF</section>
         <ul id="giphy-list">
             
         </ul>
