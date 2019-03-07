@@ -49,4 +49,43 @@ test('changing page number without changing search term', assert => {
     assert.equal(results, 'searchTerm=human&page=3');
 });
 
+function readFromQuery(query) {
+    const searchParams = new URLSearchParams(query);
+    const pageNumber = parseInt(searchParams.get('page') || 1);
+    const results = {
+        searchTerm: searchParams.get('searchTerm'),
+        page: pageNumber
+    };
+    return results;
+}
+
+test('read options from query', assert => {
+    //arrange
+    const query = 'searchTerm=human&page=3';
+    
+    const expected = {
+        searchTerm: 'human',
+        page: 3
+    };
+    //act
+    const results = readFromQuery(query);
+    //assert
+    assert.deepEqual(results, expected);
+});
+
+test('if query has no page return 1', assert => {
+    //arrange
+    const query = 'searchTerm=human';
+    
+    const expected = {
+        searchTerm: 'human',
+        page: 1
+    };
+    //act
+    const results = readFromQuery(query);
+    //assert
+    assert.deepEqual(results, expected);
+    
+});
+
 
