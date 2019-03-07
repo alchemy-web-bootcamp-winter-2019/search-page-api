@@ -1,6 +1,11 @@
 export function writeSearchToQuery(existingQuery, search) {
     const searchParams = new URLSearchParams(existingQuery);
-    searchParams.set('name', search);
+    if(search.name) {
+        searchParams.set('name', search.name);
+    }
+    if(search.colors.length > 0) {
+        searchParams.set('colors', search.colors.toString());
+    }
     searchParams.set('page', 1);
     return searchParams.toString();
 }
