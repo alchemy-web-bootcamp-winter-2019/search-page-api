@@ -54,7 +54,6 @@
             - make variable url (results) = makeSearchMovieUrl(queryOptions);
     - function makeSearchMovieUrl(queryOptions) -- this one is pretty complicated, reference the js file
     -move function to its own module
-------------------------------------
 
 6. fetch and load movies - index.js -- inside even listener
     - make variable url = makeSearchMovieUrl(queryOptions);
@@ -63,3 +62,20 @@
         .then(body => {
             loadMovies(body.results);
         });
+------------------------------------
+
+7. paging component
+    - get all of the elements by ID
+    - set currentPageNumber to 1
+    -function updateQuery()
+        -existing query = slice hash
+        -newQuery = writePageToQuery(existing, page)
+        -window.location.hash = newQuery;
+    -event listeners for both buttons
+        - incriment, function
+
+Self-guided
+    - have paging number update in UI
+    - have things be hidden/visible when appropriate
+    - remove old search
+    - prevent search when no term

@@ -13,9 +13,13 @@ export default function makeHtmlTemplate(character) {
     return template.content;
 }
 
-const characterContainer = document.getElementById('character-container');
+const characterContainer = document.getElementById('character-list-container');
 
 export function loadCharacter(allCharacters) {
+    while(characterContainer.children.length > 0) {
+        characterContainer.lastElementChild.remove();
+    }
+    
     allCharacters.forEach(character => {
         const dom = makeHtmlTemplate(character);
         characterContainer.appendChild(dom);
