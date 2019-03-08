@@ -1,7 +1,7 @@
 import { pageToURL } from './hash-query.js';
 
 const previousButtonNode = document.getElementById('previous-button');
-const nextButtonNode = document.getElementById('next-button');
+export const nextButtonNode = document.getElementById('next-button');
 const currentPageNode = document.getElementById('current-page');
 const totalPagesNode = document.getElementById('total-pages');
 
@@ -30,7 +30,6 @@ previousButtonNode.addEventListener('click', () => {
 });
 
 nextButtonNode.addEventListener('click', () => {
-
     const totalPages = totalPagesNode.textContent;
 
     const existingQuery = window.location.hash.slice(1);

@@ -1,14 +1,14 @@
 import { searchToURL } from './hash-query.js';
 
 const searchFormNode = document.getElementById('search-form');
-const bodyNode = document.getElementById('body');
+const mainNode = document.getElementById('main');
+const buttonAreaNode = document.getElementById('button-area');
 
 export default function updateSearchTerm() {
     searchFormNode.addEventListener('submit', event => {
         event.preventDefault();
-
-        var randomColor = '#' + Math.floor(Math.random() * 16777215).toString(16);
-        bodyNode.style.backgroundColor = randomColor;
+        buttonAreaNode.classList.add('show');
+        mainNode.classList.add('show');
 
         const formData = new FormData(searchFormNode);
         const q = formData.get('search-value');

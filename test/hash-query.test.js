@@ -42,7 +42,8 @@ test('get properites from URL query', assert => {
     const existingQuery = 'q=bitcoin&page=5';
     const expected = {
         q: 'bitcoin',
-        page: 5
+        page: 5,
+        sortBy: null
     };
 
     const result = queryToObject(existingQuery);

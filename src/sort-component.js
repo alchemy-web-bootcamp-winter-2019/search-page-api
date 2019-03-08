@@ -12,9 +12,6 @@ relevancyButton.addEventListener('change', () => {
         const newQuery = sortToURL(existingQuery, sort);
         window.location.hash = newQuery;
     }
-    else {
-        console.log('not relevant');
-    }
 });
 
 popularityButton.addEventListener('change', () => {
@@ -23,9 +20,6 @@ popularityButton.addEventListener('change', () => {
         const sort = 'popularity';
         const newQuery = sortToURL(existingQuery, sort);
         window.location.hash = newQuery;    
-    }
-    else {
-        console.log('not popular');
     }
 });
 
