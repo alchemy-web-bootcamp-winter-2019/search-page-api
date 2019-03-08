@@ -1,12 +1,10 @@
-import characterData from '../data/data.js';
-import loadCharacterContainer from './make-character-template.js';
+import { loadCharacterContainer } from './make-character-template.js';
 import { readFromQuery } from './hash-query.js';
 import './search-component.js';
 import './paging-component.js';
 import { updateSpeciesDropDown } from './search-component.js';
 import makeSearchSpeciesUrl from './make-search-species-url.js';
 
-loadCharacterContainer(characterData);
 
 window.addEventListener('hashchange', () => {
     const existingQuery = window.location.hash.slice(1);

@@ -13,11 +13,21 @@ export function makeCharacterTemplate(character) {
     template.innerHTML = html;
     return template.content;
 }
+
+function clearCharacters() {
+    while(characterContainer.children.length > 0) {
+        characterContainer.lastElementChild.remove();
+    }
+}
+
 const characterContainer = document.getElementById('character-container');
 
-export default function loadCharacterContainer(characters) {
+export function loadCharacterContainer(characters) {
+    clearCharacters();
+    
     characters.forEach(character => {
         const dom = makeCharacterTemplate(character);
         characterContainer.appendChild(dom);
     });
 }
+
