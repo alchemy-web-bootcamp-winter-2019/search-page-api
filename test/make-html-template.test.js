@@ -6,13 +6,13 @@ QUnit.module('Make HTML Template');
 test('does the hardcoded movie container html match the dynamically created html', assert => {
     //arrange
     const character = {
-        "id": 361,
-        "name": "Toxic Rick",
-        "status": "Dead",
-        "species": "Humanoid",
-        "type": "Rick's Toxic Side",
-        "gender": "Male",
-        "image": "https://rickandmortyapi.com/api/character/avatar/361.jpeg",
+        'id': 361,
+        'name': 'Toxic Rick',
+        'status': 'Dead',
+        'species': 'Humanoid',
+        'type': 'Rick\'s Toxic Side',
+        'gender': 'Male',
+        'image': 'https://rickandmortyapi.com/api/character/avatar/361.jpeg',
     };
 
     const expected = `

@@ -15,7 +15,7 @@ test('does the hardcoded url match the created url', assert => {
     
     //assert
     assert.deepEqual(results, 'https://rickandmortyapi.com/api/character/?page=3&species=human');
-})
+});
 test('when no search term, search disabled', assert => {
     //arrange
     const queryOptions = {
@@ -27,4 +27,4 @@ test('when no search term, search disabled', assert => {
     const results = makeSearchCharacterUrl(queryOptions);
     //assert
     assert.deepEqual(results, expected);
-})
+});

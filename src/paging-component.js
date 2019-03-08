@@ -1,4 +1,4 @@
-import { updatePageQuery } from "./hash-query.js";
+import { updatePageQuery } from './hash-query.js';
 
 const previousButton = document.getElementById('previous-button');
 const nextButton = document.getElementById('next-button');
