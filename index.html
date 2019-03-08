@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./src/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Permanent+Marker" rel="stylesheet">
+    <title>News Database</title>
+</head>
+<body id="body">
+    <header>
+        <a href="/index.html"><img id="news-logo" alt="news logo" src="assets/news-logo.svg"></a>
+        <form id="search-form">
+            <input type="text"  name="search-value" placeholder="Enter your search" autocomplete="off" id="input-field"><p></p>
+            <button><img alt="search icon" src="./assets/search-icon-white.png"></button>
+        </form>
+    </header>
+    <main id="main">
+        <section id="button-area">
+            <section id="sort-area">
+                <p>Show me:  
+                    Most Recent<input type="radio" id="published-at" name="sort" value="published-at">   | 
+                    Most Relevant<input type="radio" id="relevancy" name="sort" value="relevancy">   |
+                    Most Popular<input type="radio" id="popularity" name="sort" value="popularity">
+                </p>
+            </section>
+            <a href="" id="mail-link">Email this page to a friend!</a>
+            <section id="buttons">
+                <button id="previous-button"> &lt; </button>
+                <p id="page-number-area">Page <span id="current-page">0</span> of <span id="total-pages">0</span></p>
+                <button id="next-button"> &gt; </button>
+            </section>
+        </section>
+        <ul id="article-list"></ul>
+    </main>
+    <footer>
+        &copy; Ben Parisot 2019 with the help of <a target="blank" href="https://newsapi.org">NewsAPI.org</a>.
+    </footer>
+    <script type="module" src="src/index.js"></script>
+</body>
+</html>
