@@ -31,7 +31,6 @@ previousButtonNode.addEventListener('click', () => {
 
 nextButtonNode.addEventListener('click', () => {
     const totalPages = totalPagesNode.textContent;
-
     const existingQuery = window.location.hash.slice(1);
     const searchParams = new URLSearchParams(existingQuery);
     let currentPage = searchParams.get('page');
