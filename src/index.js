@@ -1,7 +1,6 @@
-import { loadCharacterContainer } from './make-character-template.js';
+import loadCharacterContainer from './make-character-template.js';
 import { readFromQuery } from './hash-query.js';
-import './search-component.js';
-import './paging-component.js';
+import { updatePaging } from './paging-component.js';
 import { updateSpeciesDropDown } from './search-component.js';
 import makeSearchSpeciesUrl from './make-search-species-url.js';
 
@@ -17,6 +16,13 @@ window.addEventListener('hashchange', () => {
     fetch(url)
         .then(response => response.json())
         .then(body => {
+            console.log(body);
             loadCharacterContainer(body.results);
+
+            const pagingInfo = {
+                totalPages: body.info.pages
+            };
+            updatePaging(pagingInfo);
+            console.log(pagingInfo);
         });
 });

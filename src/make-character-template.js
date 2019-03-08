@@ -22,7 +22,7 @@ function clearCharacters() {
 
 const characterContainer = document.getElementById('character-container');
 
-export function loadCharacterContainer(characters) {
+export default function loadCharacterContainer(characters) {
     clearCharacters();
     
     characters.forEach(character => {
@@ -30,4 +30,3 @@ export function loadCharacterContainer(characters) {
         characterContainer.appendChild(dom);
     });
 }
-
