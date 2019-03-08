@@ -73,13 +73,12 @@
     -event listeners for both buttons
         - incriment, function
 
-Self-guided
+Self-goals
     - have paging number update in UI 
     - remove old search  
     - have things be hidden/visible when appropriate
     - disable paging buttons
     - prevent search when no term
-------------------------------------
-    - create "all" search
     - 404 message
+------------------------------------
     

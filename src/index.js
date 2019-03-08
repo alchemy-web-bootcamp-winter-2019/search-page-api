@@ -5,10 +5,6 @@ import { loadCharacter } from './make-html-template.js';
 import './paging-component.js';
 import updatePaging from './paging-component.js';
 
-const searchContainer = document.getElementById('search-container');
-const pagingContainer = document.getElementById('paging-container');
-const characterList = document.getElementById('character-list-container');
-
 const pagingVisibility = document.getElementById('paging-visibility');
 const charactersVisibility = document.getElementById('characters-visibility');
 const promptVisibility = document.getElementById('prompt-visibility');
