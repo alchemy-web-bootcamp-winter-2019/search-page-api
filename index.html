@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="main.css">
+        <title>Sweet Cat App</title>
+    </head>
+    <body>
+
+        <header>
+            <h1>Schweet Cat App</h1>
+            <a href="index.html" id="reset-link">RESET</a>
+        </header>
+
+        <main>
+            <section id="all-text">
+                <section>
+                    <span class="plain-text">
+                        Number of Cats to Display:
+                    </span>
+                    <form id="input-form">
+                        <input placeholder="max = 99" type="text" id="text-input" class="buttons"  maxlength="2" size="20" required>
+                        <button id="generate-button" class="buttons">Generate</button>
+                    </form>
+                </section>
+                <section id="pagnation-section">
+                    <button id="previous-button" class="buttons">&lt; Previous</button>
+                    <span class="plain-text">current page:</span>
+                    <span id="current-page-node"></span>
+                    <button id="next-button" class="buttons">Next &gt;</button>
+                </section>
+            </section>
+            <ul id="cat-gallery"></ul>
+        </main>
+        <script type="module" src="./src/index.js"></script>
+    </body>
+</html>
