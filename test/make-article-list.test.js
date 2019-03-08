@@ -21,7 +21,7 @@ const article = {
 test('make list of articles from template', assert => {
     
     const expected = `
-    <li>
+    <li class="article-li">
                 <section class="article-img"><img src="${article.urlToImage}" onerror="this.onerror=null;this.src='https://ak6.picdn.net/shutterstock/videos/1418746/thumb/5.jpg';"></section>
                 <section class="article-info"><h2 class="article-title">Coinbase users can now withdraw Bitcoin SV following BCH fork</h2>
                 <p class="article-author">by Romain Dillet</p>
