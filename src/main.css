@@ -4,7 +4,7 @@
     font-family: 'Open Sans', sans-serif;
 }
 body {
-    background-color: violet;
+    background-color: teal;
 
 }
 h1 {
@@ -14,7 +14,6 @@ h1 {
 ul {
     display: flex;
     flex-flow: row wrap;
-    /* justify-content: space-around; */
     text-align: center;
     align-content: flex-start;
     list-style: none;
