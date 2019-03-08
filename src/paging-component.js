@@ -1,4 +1,4 @@
-import { writePageToQuery, readFromQuery } from './hash-query.js';
+import { writePageToQuery } from './hash-query.js';
 
 const previousButton = document.getElementById('previous-button');
 const nextButton = document.getElementById('next-button');
