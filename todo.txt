@@ -62,7 +62,6 @@
         .then(body => {
             loadMovies(body.results);
         });
-------------------------------------
 
 7. paging component
     - get all of the elements by ID
@@ -75,9 +74,11 @@
         - incriment, function
 
 Self-guided
-    - have paging number update in UI <
+    - have paging number update in UI 
+    - remove old search  
     - have things be hidden/visible when appropriate
-    - remove old search  <
+------------------------------------
+    - disable paging buttons
     - prevent search when no term
     - create "all" search
     - 404 message

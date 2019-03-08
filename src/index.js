@@ -9,6 +9,10 @@ const searchContainer = document.getElementById('search-container');
 const pagingContainer = document.getElementById('paging-container');
 const characterList = document.getElementById('character-list-container');
 
+const pagingVisibility = document.getElementById('paging-visibility');
+const charactersVisibility = document.getElementById('characters-visibility');
+const promptVisibility = document.getElementById('prompt-visibility');
+
 window.addEventListener('hashchange', loadQuery);
 
 function loadQuery() {
@@ -17,6 +21,17 @@ function loadQuery() {
     updateSearchTerm(queryOptions.searchTerm);
 
     const url = makeSearchCharacterUrl(queryOptions);
+
+    if(!url) {
+        promptVisibility.classList.remove('hidden');
+        charactersVisibility.classList.add('hidden');
+        pagingVisibility.classList.add('hidden');
+
+    } else {
+        promptVisibility.classList.add('hidden');
+        charactersVisibility.classList.remove('hidden');
+        pagingVisibility.classList.remove('hidden');
+    }
 
     fetch(url)
         .then(response => response.json())
