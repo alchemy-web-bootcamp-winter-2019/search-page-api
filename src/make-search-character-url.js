@@ -5,5 +5,9 @@ export default function makeSearchCharacterUrl(queryOptions) {
     url.searchParams.set('page', queryOptions.page);
     url.searchParams.set('species', queryOptions.searchTerm);
 
+    if(!queryOptions.searchTerm) {
+        return '';
+    }
+
     return url.toString();
 }
