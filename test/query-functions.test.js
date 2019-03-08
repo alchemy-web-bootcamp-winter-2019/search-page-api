@@ -69,7 +69,7 @@ import { readFromQuery } from '../src/query-functions.js';
 
 test('reads filter options', assert => {
     //arrange
-    const queryOptions = 'name=Morty&status=dead&species=human&page=1';
+    const queryOptions = '#name=Morty&status=dead&species=human&page=1';
     const expected = {
         name: 'Morty',
         status: 'dead',
@@ -83,7 +83,7 @@ test('reads filter options', assert => {
 });
 test('reads filter options', assert => {
     //arrange
-    const queryOptions = 'name=Morty&status=&species=&page=1';
+    const queryOptions = '#name=Morty&status=&species=&page=1';
     const expected = {
         name: 'Morty',
         status: '',

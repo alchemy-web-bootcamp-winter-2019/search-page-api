@@ -14,7 +14,7 @@ export function writePageToQuery(existingQuery, page) {
 }
 
 export function readFromQuery(queryOptions) {
-    const searchParams = new URLSearchParams(queryOptions);
+    const searchParams = new URLSearchParams(queryOptions.slice(1));
     const filterOptions = {
         name: searchParams.get('name'),
         status: searchParams.get('status'),

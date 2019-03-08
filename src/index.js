@@ -7,7 +7,6 @@ import updatePaging from './paging-component.js';
 window.addEventListener('hashchange', loadQuery);
 
 function loadQuery() {
-
     const searchOptions = readFromQuery(window.location.hash);
     const apiURL = makeSearchUrlFromQuery(searchOptions);
     let pagingInfo = {};
