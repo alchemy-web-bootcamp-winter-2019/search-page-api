@@ -21,10 +21,13 @@ previousButton.addEventListener('click', () => {
 nextButton.addEventListener('click', () => {
     currentPageNumber++;
     updateQuery();
-    console.log(currentPageNumber);
 });
 
 export default function updatePaging(pagingInfo) {
-    currentPage.textContent = pagingInfo.page;
+    currentPageNumber = pagingInfo.page;
+    currentPage.textContent = currentPageNumber;
     totalPages.textContent = pagingInfo.totalPages;
+    previousButton.disabled = currentPageNumber === 1;
+    console.log(pagingInfo.totalPages);
+    nextButton.disabled = currentPageNumber === pagingInfo.totalPages;
 }
