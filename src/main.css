@@ -100,14 +100,6 @@ button img {
     align-items: center;
 }
 
-#relevancy {
-    background: lightblue;
-}
-
-#popularity {
-    background: lightgreen;
-}
-
 #button-area a {
     text-decoration: none;
     font-style: italic;
@@ -140,7 +132,7 @@ main.show {
     justify-content: space-between;
 }
 
-#article-list li {
+.article-li {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -152,10 +144,11 @@ main.show {
     border: 1px solid black;
     margin-bottom: 15px;
     background: white;
-    /* opacity: 0; */
+    transition: opacity 2s ease-in-out;
+    opacity: 0;
 }
 
-article-list li.show {
+.article-li.show {
     opacity: 1;
 }
 

@@ -1,6 +1,6 @@
 export function makeArticleList(article) {
     const html = `
-    <li>
+    <li class="article-li">
                 <section class="article-img"><img src="${article.urlToImage}" onerror="this.onerror=null;this.src='https://ak6.picdn.net/shutterstock/videos/1418746/thumb/5.jpg';"></section>
                 <section class="article-info"><h2 class="article-title">${article.title}</h2>
                 <p class="article-author">by ${article.author}</p>
@@ -23,4 +23,11 @@ export default function loadArticles(articles) {
         articleListNode.appendChild(articleLI);
     });
 
+    const articleClass = document.getElementsByClassName('article-li');
+    const articleClassArray = Array.from(articleClass);
+    setTimeout(function() {
+        articleClassArray.forEach(item => {
+            item.classList.add('show');
+        });
+    }, 6);
 }

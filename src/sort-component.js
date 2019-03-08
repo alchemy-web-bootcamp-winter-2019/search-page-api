@@ -26,7 +26,7 @@ popularityButton.addEventListener('change', () => {
 publishedAtButton.addEventListener('change', () => {
     const existingQuery = window.location.hash.slice(1);
     if(publishedAtButton.checked) {
-        const sort = 'pubishedAt';
+        const sort = 'publishedAt';
         const newQuery = sortToURL(existingQuery, sort);
         window.location.hash = newQuery;
     }

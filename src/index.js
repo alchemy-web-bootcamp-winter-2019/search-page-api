@@ -9,6 +9,7 @@ import './sort-component.js';
 
 updateSearchTerm();
 window.addEventListener('hashchange', () => {
+    mailPage();
     const query = window.location.hash.slice(1);
     const queryOptions = queryToObject(query);
     const URL = makeSearchArticlesURL(queryOptions);
@@ -19,5 +20,4 @@ window.addEventListener('hashchange', () => {
             updatePaging(queryOptions.page, response.totalResults);
         });
 });
-
-mailPage();
+    
