@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>M:TG Card Search</title>
+    <link rel="stylesheet" href="./src/main.css">
+</head>
+<body>
+    <header>
+        <h1>M:TG Card Search</h1>
+    </header>
+    <main>
+        <form id="search-form">
+            <input type="text" id="search-name">
+            <label>White 
+                <input type="checkbox" name="color" value="white">
+            </label>
+            <label>Blue 
+                <input type="checkbox" name="color" value="blue">
+            </label>
+            <label>Black 
+                <input type="checkbox" name="color" value="black">
+            </label>
+            <label>Red 
+                <input type="checkbox" name="color" value="red">
+            </label>
+            <label>Green 
+                <input type="checkbox" name="color" value="green">
+            </label>
+            <button>Search</button>
+        </form>
+        <p id="prompt">Enter a name to start search</p>
+        <section id="card-container" class="hidden">
+            <section>
+                <button id="previous-button">&lt; Previous</button>
+                Page <span id="current-page"></span> of <span id="total-pages"></span>
+                <button id="next-button">Next &gt;</button>
+            </section>
+            <ul id="card-list">
+            </ul>
+        </section>
+    </main>
+    <footer></footer>
+    <script type="module" src="./src/index.js"></script>
+</body>
+</html>
