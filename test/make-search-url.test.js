@@ -4,12 +4,10 @@ const test = QUnit.test;
 
 QUnit.module('search tests');
 
-
-
 test('url includes encoded search term from input', assert => {
     //arrange
-    const searchOptions = {
-        term: 'ding dong',
+    const searchOptions = { search: 
+        { query: 'ding dong' }
     };
     //act
     const url = makeSearchUrl(searchOptions);
