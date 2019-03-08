@@ -5,7 +5,7 @@ const limitNode = document.getElementById('text-input');
 const generateNode = document.getElementById('generate-button');
 
 generateNode.addEventListener('click', event => {
-    const page = 1;
+    let page = 1;
     event.preventDefault();
     let currentQuery = window.location.hash.slice(1);
     const catLimit = limitNode.value;
