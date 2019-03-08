@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Topic</title>
+    <link rel="stylesheet" href="./src/index.css">
+</head>
+<body>
+    <header>
+        <h1>Trump Dump Quotes</h1>
+        <form id="form">
+            <input type="text" id="search">
+            <button>Search</button>
+        </form>
+        <p id="prompt">See who Trump hates today!</p>
+        <section id="buttons-container" class="hidden">
+            <button id="previous-button">Previous</button>
+            <p>
+                Page <span id="current-page">1</span> of <span id="total-pages">42</span>
+            </p>
+            <button id="next-button">Next</button>
+        </section>
+    </header>
+    <main>
+        <ul id="quote-list"></ul>
+
+    </main>
+    <footer>
+
+    </footer>
+    <script type="module" src="./src/index.js"></script>
+</body>
+</html>
