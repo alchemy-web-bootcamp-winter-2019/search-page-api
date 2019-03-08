@@ -2,22 +2,26 @@ import { writePageToQuery } from './querys-components.js';
 
 const nextButton = document.getElementById('next-button');
 const previousButton = document.getElementById('previous-button');
+const button = document.getElementById('generate-button');
 
 let currentPageNumber = 1;
 previousButton.disabled = true;
 
 const textInputNode = document.getElementById('text-input');
-if(textInputNode.value === null){
-    nextButton.disabled = true;
-}
+
+// eslint-disable-next-line eqeqeq
+// if(textInputNode.value === false) {
+//     nextButton.disabled === true;
+// }
 
 export function resetPageNumber() {
     currentPageNumber = 1;
 }
 
-function checkButtonStatus() {
+export function checkButtonStatus() {
     previousButton.disabled = currentPageNumber <= 1;
 }
+
 checkButtonStatus();
 
 nextButton.addEventListener('click', () => {

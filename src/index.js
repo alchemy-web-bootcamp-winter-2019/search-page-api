@@ -2,6 +2,7 @@ import loadCats from './create-cat-component.js';
 import './limit-cats.js';
 import { makeAPIurl, readFromQuery } from './querys-components.js';
 import './pagnation-component.js';
+import { checkButtonStatus } from './pagnation-component.js';
 
 // const url = 'https://api.thecatapi.com/v1/images/search?limit=15&page=0&order=Desc';
 
@@ -17,6 +18,8 @@ window.addEventListener('hashchange', () => {
         .then(response => response.json())
         .then(body => {
             loadCats(body);
+            checkButtonStatus();
         })
-        .catch(error => console.log('catch errors', error));
+        // .catch(error => console.log('catch errors', error))
+    ;
 });

@@ -12,7 +12,6 @@ test('create cat template function', assert => {
 
     const expected = `
         <li>
-            <h2>Random Cat</h2>
             <img src="https://images.mentalfloss.com/sites/default/files/styles/mf_image_16x9/public/549585-istock-909106260.jpg?itok=ds7LqH1N&amp;resize=1100x1100">
         </li>
     `;

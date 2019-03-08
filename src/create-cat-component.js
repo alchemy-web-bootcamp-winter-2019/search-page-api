@@ -3,7 +3,6 @@ const catGalleryNode = document.getElementById('cat-gallery');
 export function createCatTemplateFunction(catObject) {
     const html = `
         <li>
-            <h2>Random Cat</h2>
             <img src="${catObject.url}">
         </li>
     `;
@@ -21,7 +20,3 @@ export default function loadCats(catsObject) {
         catGalleryNode.appendChild(dom);
     });
 }
-
-// 1. --- clearCats function => while(){.remove();}
-
-// 2. --- makeSearch function -> needs testing
