@@ -1,0 +1,47 @@
+body {
+    width: 1500px;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header h1 {
+    flex-grow: 1;
+}
+
+#paging-section {
+    display: flex;
+    align-items: center;
+}
+
+#paging-section span {
+    margin: 5px;
+}
+
+#paging-section button {
+    border-radius: 5px;
+}
+
+#character-list {
+    width: 1500px;
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.character-item {
+    background-color: pink;
+    width: 250px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.character-item img {
+    width: 80%;
+}

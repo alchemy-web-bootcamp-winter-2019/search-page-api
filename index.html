@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Rick + Morty API Access!</title>
+    <link rel="stylesheet" type="text/css" href="./src/main.css">
+</head>
+<body>
+    <header>
+        <img src="assets/alchemy-logo.png">
+        <h1>Rick and Morty API</h1>
+        <a href="./index.html">Home</a>
+    </header>
+
+    <main>
+        <form id="filter-form">
+            <select id="species" name="species">
+                <option value="" selected>Filter by Species</option>
+                <option value="">No Filter</option>
+                <option value="Human">Human</option>
+                <option value="Humanoid">Humanoid</option>
+                <option value="Alien">Alien</option>
+                <option value="Mytholog">Mytholog</option>
+                <option value="Poopybutthole">Poopybutthole</option>
+                <option value="Animal">Animal</option>
+            </select>
+            <select id="status" name="status">
+                <option value="" selected>Filter by Status</option>
+                <option value="">No Filter</option>
+                <option value="Alive">Alive</option>
+                <option value="Dead">Dead</option>
+                <option value="Unknown">Unknown</option>
+            </select>
+            <input type="text" name="name" id="name" placeholder="Search by Name">
+            <button type="submit">Search</button>
+        </form>
+
+        <section id="paging-section">
+            <button id="previous-button">Previous</button>
+            <p><span id="current-page">1</span> of <span id="total-pages">1</span></p>
+            <button id="next-button">Next</button>
+        </section>
+
+        <section>
+            <ul id="character-list">
+            </ul>
+        </section>
+    </main>
+    <footer></footer>
+    <script type="module" src="./src/index.js"></script>
+</body>
+</html>
