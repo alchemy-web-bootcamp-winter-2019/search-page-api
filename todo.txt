@@ -75,7 +75,10 @@
         - incriment, function
 
 Self-guided
-    - have paging number update in UI
+    - have paging number update in UI <
     - have things be hidden/visible when appropriate
-    - remove old search
+    - remove old search  <
     - prevent search when no term
+    - create "all" search
+    - 404 message
+    

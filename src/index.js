@@ -3,6 +3,7 @@ import updateSearchTerm from './search-component.js';
 import makeSearchCharacterUrl from './make-search-character-url.js';
 import { loadCharacter } from './make-html-template.js';
 import './paging-component.js';
+import updatePaging from './paging-component.js';
 
 const searchContainer = document.getElementById('search-container');
 const pagingContainer = document.getElementById('paging-container');
@@ -21,6 +22,10 @@ function loadQuery() {
         .then(response => response.json())
         .then(body => {
             loadCharacter(body.results);
-            console.log(body.results);
+            const pagingInfo = {
+                page: queryOptions.page,
+                totalPages: body.info.pages
+            };
+            updatePaging(pagingInfo);
         });
 }

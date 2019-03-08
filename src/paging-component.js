@@ -23,3 +23,8 @@ nextButton.addEventListener('click', () => {
     updateQuery();
     console.log(currentPageNumber);
 });
+
+export default function updatePaging(pagingInfo) {
+    currentPage.textContent = pagingInfo.page;
+    totalPages.textContent = pagingInfo.totalPages;
+}
