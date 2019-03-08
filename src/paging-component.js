@@ -1,10 +1,11 @@
 import { writePageToQuery } from './hash-query.js';
-const previousButton = document.getElementById('previous-button');
-const nextButton = document.getElementById('next-button');
 const currentPageSpan = document.getElementById('current-page');
 const totalPagesSpan = document.getElementById('total-pages');
+const previousButton = document.getElementById('previous-button');
+const nextButton = document.getElementById('next-button');
 
 let currentPageNumber = 1;
+// const PER_PAGE = 20;
 
 export function updatePaging(pagingInfo) {
     currentPageNumber = pagingInfo.page;

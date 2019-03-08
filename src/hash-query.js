@@ -16,7 +16,7 @@ export function readFromQuery(query) {
     const searchParams = new URLSearchParams(query);
     const queryOptions = {
         species: searchParams.get('species'),
-        page: parseInt(searchParams.get('page'))
+        page: parseInt(searchParams.get('page')) || 1
     };
     return queryOptions;
 }
