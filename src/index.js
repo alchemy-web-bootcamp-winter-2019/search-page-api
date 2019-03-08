@@ -23,14 +23,12 @@ function loadQuery() {
     const url = makeSearchCharacterUrl(queryOptions);
 
     if(!url) {
-        promptVisibility.classList.remove('hidden');
+        promptVisibility.textContent = 'Use the search bar to find characters by species';
         charactersVisibility.classList.add('hidden');
         pagingVisibility.classList.add('hidden');
 
     } else {
-        promptVisibility.classList.add('hidden');
-        charactersVisibility.classList.remove('hidden');
-        pagingVisibility.classList.remove('hidden');
+        promptVisibility.textContent = '';
     }
 
     fetch(url)
@@ -41,6 +39,12 @@ function loadQuery() {
                 page: queryOptions.page,
                 totalPages: body.info.pages
             };
+            pagingVisibility.classList.remove('hidden');
+            charactersVisibility.classList.remove('hidden');
             updatePaging(pagingInfo);
+        })
+        .catch(function() {
+            pagingVisibility.classList.add('hidden');
+            promptVisibility.textContent = `"${queryOptions.searchTerm}" is not a valid species type. Please try a new search.`;
         });
 }
