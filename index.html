@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="main.css">
+  <title>Document</title>
+</head>
+<body>
+  <header>
+    <h1>FIND YOUR RECIPE</h1>
+  </header>
+  <main>
+    <section>
+      <form id="search-form">
+        <label> keyword:
+          <input type="text" name="recipe-search" id="recipe-search">
+        </label>
+        <button id="submit">Search</button>
+      </form>
+      <button id="previous-button">&lt;Previous</button>
+      <span id="current-page">1 </span> of <span id="total-pages">100</span>
+      <button id="next-button">Next&gt;</button>
+    </section>
+    <section>
+      <ul id="recipe-container">
+      </ul>
+    </section>
+  </main>
+  <script type="module" src="src/index.js"></script>
+</body>
+</html>

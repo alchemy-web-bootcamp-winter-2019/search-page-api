@@ -1,0 +1,23 @@
+body {
+  background: rgb(62,2,99);
+  background: linear-gradient(90deg, rgba(62,2,99,1) 0%, rgba(223,0,251,1) 50%, rgba(51,1,82,1) 100%);
+}
+ul {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+li {
+  display: flex;
+  list-style: none;
+  border: solid black 2px;
+  padding: 10px 10px;
+  flex-flow: column wrap;
+  width: 20vw;
+  align-items: center;
+  text-align: center;
+}
+
+img {
+  width: 18vw;
+}

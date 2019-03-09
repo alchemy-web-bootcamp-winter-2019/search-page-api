@@ -1,0 +1,43 @@
+body {
+  background: rgb(62,2,99);
+  background: linear-gradient(90deg, rgba(62,2,99,1) 0%, rgba(223,0,251,1) 50%, rgba(51,1,82,1) 100%);
+}
+
+header{
+  text-align: center;
+  font-size: 2em;
+}
+
+dl {
+  display: flex;
+  flex-flow: column;
+  flex-basis: 20%;
+  border-width: 1px 1px 0 0;
+  margin: 100px 20px;
+}
+
+dt {
+  width:10vw;
+  background: black;
+  padding: 10px;
+  text-align: start;
+  color: tan;
+  font-weight: bold 
+}
+.make-row{
+  display: flex;
+  flex-flow: row;
+}
+dd {
+  display: flex;
+  flex-basis: 70%;
+  flex-grow: 1;
+  margin: 0;
+  padding: 10px 15px;
+  align-self: center;
+}
+
+dd{
+  background: tan;
+
+}
