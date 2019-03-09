@@ -694,6 +694,6 @@ const recipe =
     },
     'bookmarked': false,
     'bought': false
-}
+};
 
 export default recipe;
