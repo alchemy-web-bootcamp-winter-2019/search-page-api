@@ -5,7 +5,6 @@ const previousButton = document.getElementById('previous-button');
 const nextButton = document.getElementById('next-button');
 
 let currentPageNumber = 1;
-// const PER_PAGE = 20;
 
 export function updatePaging(pagingInfo) {
     currentPageNumber = pagingInfo.page;
