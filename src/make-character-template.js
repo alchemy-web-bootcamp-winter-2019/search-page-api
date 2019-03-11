@@ -25,8 +25,10 @@ const characterContainer = document.getElementById('character-container');
 export default function loadCharacterContainer(characters) {
     clearCharacters();
     
-    characters.forEach(character => {
-        const dom = makeCharacterTemplate(character);
-        characterContainer.appendChild(dom);
-    });
+    if(characters) {
+        characters.forEach(character => {
+            const dom = makeCharacterTemplate(character);
+            characterContainer.appendChild(dom);
+        });
+    }
 }

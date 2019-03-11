@@ -2,8 +2,14 @@ export default function makeSearchSpeciesUrl(queryOptions) {
     const SEARCH_SPECIES_URL = 'https://rickandmortyapi.com/api/character/';
 
     const url = new URL(SEARCH_SPECIES_URL);
-    url.searchParams.set('species', queryOptions.species);
+    if(queryOptions.species) {
+        url.searchParams.set('species', queryOptions.species);
+    }
+    if(queryOptions.name) {
+        url.searchParams.set('name', queryOptions.name);
+    }
     url.searchParams.set('page', queryOptions.page);
-    
+    // url.searchParams.set('status', queryOptions.status);
+
     return url.toString();
 }

@@ -16,12 +16,16 @@ window.addEventListener('hashchange', () => {
     fetch(url)
         .then(response => response.json())
         .then(body => {
-            loadCharacterContainer(body.results);
-
-            const pagingInfo = {
-                page: parseInt(queryOptions.page),
-                totalPages: body.info.pages
-            };
-            updatePaging(pagingInfo);
+            if(body.error) {
+                console.log(body.error);
+            } else {
+                loadCharacterContainer(body.results);
+                console.log(body);
+                const pagingInfo = {
+                    page: parseInt(queryOptions.page),
+                    totalPages: body.info.pages
+                };
+                updatePaging(pagingInfo);
+            }
         });
 });
