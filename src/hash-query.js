@@ -1,4 +1,4 @@
-import { updateSpeciesDropDown } from './search-component';
+import { updateSpeciesDropDown } from './search-component.js';
 export function writeSearchToQuery(existingQuery, species, name, status) {
     const searchParams = new URLSearchParams(existingQuery);
     if(species === 'all-characters') {
