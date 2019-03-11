@@ -5,11 +5,9 @@ const previousButton = document.getElementById('previous-button');
 const nextButton = document.getElementById('next-button');
 
 let currentPageNumber = 1;
-// const PER_PAGE = 20;
 
 export function updatePaging(pagingInfo) {
     currentPageNumber = pagingInfo.page;
-    // look at pokedex for paging instructions
     currentPageSpan.textContent = currentPageNumber;
     totalPagesSpan.textContent = pagingInfo.totalPages;
     previousButton.disabled = currentPageNumber === 1;

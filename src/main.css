@@ -70,15 +70,13 @@ form {
 }
 
 fieldset { 
-    /* padding: 30px; */
-    /* margin: 10px 10px 10px 100px; */
     box-shadow: 10px 10px 10px black;
 }
 
 section { 
     margin: 10px;
 }
-#species-dropdown {
+#species-dropDown {
     position: relative; 
     font-size: 1.2em;
     width: 190px;

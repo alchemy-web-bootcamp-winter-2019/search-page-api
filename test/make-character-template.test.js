@@ -3,7 +3,6 @@ const test = QUnit.test;
 QUnit.module('CHARACTER CARD');
 
 test('Populate character profiles', assert => {
-    // arrange
     const expected = /*html*/`
         <li>
             <p>Rick Sanchez</p>
@@ -68,8 +67,7 @@ test('Populate character profiles', assert => {
         'created': '2017-11-04T18:48:46.250Z'
     };
     
-    // act
     const result = makeCharacterTemplate(character);
-    // assert
+   
     assert.htmlEqual(result, expected);
 });

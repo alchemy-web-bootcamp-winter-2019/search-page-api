@@ -9,7 +9,6 @@ export default function makeSearchSpeciesUrl(queryOptions) {
         url.searchParams.set('name', queryOptions.name);
     }
     url.searchParams.set('page', queryOptions.page);
-    // url.searchParams.set('status', queryOptions.status);
 
     return url.toString();
 }
