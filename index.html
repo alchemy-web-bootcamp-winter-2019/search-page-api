@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="./src/main.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Concert+One|Fredoka+One" rel="stylesheet">
     <title>Rick and Morty Peeps</title>
 </head>
 
@@ -16,20 +17,28 @@
     <main>
         <form id="form">
             <select name="species-dropdown" id="species-dropdown">
-                <!-- <option value="choose">Choose a species</option> -->
+                <option value="choose">Choose a species</option>
                 <!-- <option value="all-species">All Species</option> -->
-                <option value="human">Human</option>
                 <option value="alien">Alien</option>
+                <option value="alien-parasite">Alien Parasite</option>
+                <option value="human">Human</option>
                 <option value="humanoid">Humanoid</option>
+                <option value="mytholog">Mythologs</option>
+                <option value="robot">Robots</option>
+                <option value="vampire">Vampires</option>
             </select>
+            <fieldset id="search-by-name">
+                    <legend>Search by name:</legend>
+                        <input type="text" id="name-search"></br>
+                        <button>Search</button>
+            </fieldset>
         </form>
-
         <section>
-            <button id="previous-button">&lt; Previous</button>
-            <span id="current-page">1</span>
-            of
-            <span id="total-pages"></span>
-            <button id="next-button">Next &gt;</button>
+                <button id="previous-button">&lt; Previous</button>
+                <span id="current-page">1</span>
+                of
+                <span id="total-pages"></span>
+                <button id="next-button">Next &gt;</button>
         </section>
 
         <ul id="character-container"></ul>

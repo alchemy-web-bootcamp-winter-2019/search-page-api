@@ -1,6 +1,7 @@
 import { writeSearchToQuery } from '../src/hash-query.js';
 import { writePageToQuery } from '../src//hash-query.js';
 import { readFromQuery } from '../src/hash-query.js';
+import { writeNewSearchToQuery } from '../src/hash-query.js';
 
 const test = QUnit.test;
 QUnit.module('SET URL QUERY');
@@ -60,3 +61,18 @@ test('read from query', assert => {
     assert.deepEqual(result, expected);
 
 });
+
+test('add name search to empty query', assert => {
+    // arrange
+
+    // act
+    const expected = 'name=rick+sanchez&page=1';
+    const existingQuery = '';
+    const name = 'rick sanchez';
+
+    const result = writeNewSearchToQuery(existingQuery, name);
+
+    // assert
+    assert.equal(result, expected);
+});
+

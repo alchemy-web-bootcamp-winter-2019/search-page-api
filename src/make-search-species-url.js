@@ -4,5 +4,6 @@ export default function makeSearchSpeciesUrl(queryOptions) {
     const url = new URL(SEARCH_SPECIES_URL);
     url.searchParams.set('species', queryOptions.species);
     url.searchParams.set('page', queryOptions.page);
+    
     return url.toString();
 }

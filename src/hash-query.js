@@ -20,3 +20,11 @@ export function readFromQuery(query) {
     };
     return queryOptions;
 }
+
+export function writeNewSearchToQuery(existingQuery, name) {
+    const searchParams = new URLSearchParams(existingQuery);
+    searchParams.set('name', name);
+    searchParams.set('page', 1);
+    return searchParams.toString();
+}
+
