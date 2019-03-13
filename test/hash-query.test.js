@@ -48,3 +48,4 @@ test('read from query', assert => {
     assert.deepEqual(result, expected);
 
 });
+

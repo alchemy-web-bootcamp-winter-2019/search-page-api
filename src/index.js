@@ -4,20 +4,23 @@ import { updatePaging } from './paging-component.js';
 import { updateSpeciesDropDown } from './search-component.js';
 import makeSearchSpeciesUrl from './make-search-species-url.js';
 
+loadQuery();
 
-window.addEventListener('hashchange', () => {
+window.addEventListener('hashchange', loadQuery);
+
+function loadQuery() {
     const existingQuery = window.location.hash.slice(1);
     const queryOptions = readFromQuery(existingQuery);
-    
-    updateSpeciesDropDown(queryOptions.species);
 
+    updateSpeciesDropDown(queryOptions.species);
+    update
     const url = makeSearchSpeciesUrl(queryOptions);
 
     fetch(url)
         .then(response => response.json())
         .then(body => {
             if(body.error) {
-                console.log(body.error);
+                console.log('error', body.error);
             } else {
                 loadCharacterContainer(body.results);
                 console.log(body);
@@ -28,4 +31,4 @@ window.addEventListener('hashchange', () => {
                 updatePaging(pagingInfo);
             }
         });
-});
+}

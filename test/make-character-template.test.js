@@ -6,7 +6,7 @@ test('Populate character profiles', assert => {
     const expected = /*html*/`
         <li>
             <p>Rick Sanchez</p>
-            <img src="https://rickandmortyapi.com/api/character/avatar/1.jpeg">
+            <img src="https://rickandmortyapi.com/api/character/avatar/1.jpeg" class="character-image">
             <div>
                 <p>Status: <span>Alive</span></p>
                 <p>Species: <span>Human</span></p>

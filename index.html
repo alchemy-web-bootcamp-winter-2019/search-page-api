@@ -11,13 +11,13 @@
 
 <body>
     <header>
-        <h1>Rick and Morty Characters</h1>
+        <img src="https://occ-0-2433-448.1.nflxso.net/dnm/api/v5/rendition/8e167858e96558328f8ee56178face53f4345520/AAAABU8K8mJ3rSBzNpuuipj547HCujzhz8GcI7rinHdCO-PHczADJbFoZ6Ybk6A2NAqV3U16l1PkInraCTzS6LvCyIspytKBXVU85eRd4yM68r7NJ_BqAhkU0sREQY6QZjf2L0pnYp0sbZ3hy3XVBR0WsDOKRLFiGBE7bpw.png" id="header-image">
     </header>
 
     <main>
-        <form id="form">
+        <form id="form" name="form">
             <select id="species-dropDown">    
-                <option value="all-characters">All Characters</option>
+                <option value="">All Characters</option>
                 <option value="alien">Aliens</option>
                 <option value="human">Humans</option>
                 <option value="humanoid">Humanoids</option>
@@ -26,6 +26,11 @@
                 <option value="robot">Robots</option>
                 <option value="vampire">Vampires</option>
             </select>
+            <!-- <select id="status-dropdown">Living or dead?
+                <option value="" placeholder>Living or dead?</option>
+                <option value="alive">Alive</option>
+                <option value="dead">Dead</option>
+            </select> -->
             <fieldset id="search-by-name">
                     <legend>Search by name:</legend>
                     <input type="text" id="name-search"/>
