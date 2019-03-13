@@ -13,7 +13,6 @@ function loadQuery() {
     const queryOptions = readFromQuery(existingQuery);
 
     updateSpeciesDropDown(queryOptions.species);
-    update
     const url = makeSearchSpeciesUrl(queryOptions);
 
     fetch(url)

@@ -16,4 +16,4 @@ searchForm.addEventListener('change', event => {
 
 export function updateSpeciesDropDown(species) {
     speciesDropDown.value = species;
-}``
+}
