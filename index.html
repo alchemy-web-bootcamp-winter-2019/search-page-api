@@ -5,36 +5,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="./src/main.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Concert+One|Fredoka+One" rel="stylesheet">
     <title>Rick and Morty Peeps</title>
 </head>
 
 <body>
     <header>
-        <h1>Rick and Morty Characters</h1>
+        <img src="https://occ-0-2433-448.1.nflxso.net/dnm/api/v5/rendition/8e167858e96558328f8ee56178face53f4345520/AAAABU8K8mJ3rSBzNpuuipj547HCujzhz8GcI7rinHdCO-PHczADJbFoZ6Ybk6A2NAqV3U16l1PkInraCTzS6LvCyIspytKBXVU85eRd4yM68r7NJ_BqAhkU0sREQY6QZjf2L0pnYp0sbZ3hy3XVBR0WsDOKRLFiGBE7bpw.png" id="header-image">
     </header>
 
     <main>
-        <form id="form">
-            <select name="species-dropdown" id="species-dropdown">
-                <option value="choose">Choose a species</option>
-                <!-- <option value="all-species">All Species</option> -->
+        <form id="form" name="form">
+            <select id="species-dropDown">    
+                <option value="">All Characters</option>
                 <option value="alien">Aliens</option>
-                <option value="parasite">Alien Parasite</option>
                 <option value="human">Humans</option>
                 <option value="humanoid">Humanoids</option>
                 <option value="mytholog">Mythologs</option>
+                <option value="parasite">Parasites</option>
                 <option value="robot">Robots</option>
                 <option value="vampire">Vampires</option>
-
             </select>
+            <!-- <select id="status-dropdown">Living or dead?
+                <option value="" placeholder>Living or dead?</option>
+                <option value="alive">Alive</option>
+                <option value="dead">Dead</option>
+            </select> -->
+            <fieldset id="search-by-name">
+                    <legend>Search by name:</legend>
+                    <input type="text" id="name-search"/>
+            </fieldset>
         </form>
-
         <section>
-            <button id="previous-button">&lt; Previous</button>
-            <span id="current-page">1</span>
-            of
-            <span id="total-pages"></span>
-            <button id="next-button">Next &gt;</button>
+                <button id="previous-button">&lt; Previous</button>
+                <span id="current-page">1</span>
+                of
+                <span id="total-pages"></span>
+                <button id="next-button">Next &gt;</button>
         </section>
 
         <ul id="character-container"></ul>

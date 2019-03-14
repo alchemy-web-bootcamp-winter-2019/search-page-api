@@ -8,7 +8,6 @@ let currentPageNumber = 1;
 
 export function updatePaging(pagingInfo) {
     currentPageNumber = pagingInfo.page;
-    // look at pokedex for paging instructions
     currentPageSpan.textContent = currentPageNumber;
     totalPagesSpan.textContent = pagingInfo.totalPages;
     previousButton.disabled = currentPageNumber === 1;

@@ -3,11 +3,10 @@ const test = QUnit.test;
 QUnit.module('CHARACTER CARD');
 
 test('Populate character profiles', assert => {
-    // arrange
     const expected = /*html*/`
         <li>
             <p>Rick Sanchez</p>
-            <img src="https://rickandmortyapi.com/api/character/avatar/1.jpeg">
+            <img src="https://rickandmortyapi.com/api/character/avatar/1.jpeg" class="character-image">
             <div>
                 <p>Status: <span>Alive</span></p>
                 <p>Species: <span>Human</span></p>
@@ -68,8 +67,7 @@ test('Populate character profiles', assert => {
         'created': '2017-11-04T18:48:46.250Z'
     };
     
-    // act
     const result = makeCharacterTemplate(character);
-    // assert
+   
     assert.htmlEqual(result, expected);
 });
