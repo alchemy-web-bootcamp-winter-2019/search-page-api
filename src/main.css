@@ -1,0 +1,89 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    font-family: 'Fredoka One', cursive;
+}
+
+body {
+    background-color: teal;
+
+}
+
+main {
+    border: 2px solid;
+    border-radius: 20px;
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid white;
+    box-shadow: 10px 10px 10px teal;
+}
+
+#header-image {
+    width: 100%;
+}
+
+ul {
+    display: flex;
+    flex-flow: row wrap;
+    text-align: center;
+    align-content: flex-start;
+    list-style: none;
+}
+
+li {
+    border: solid lime 2px;
+    background-color: rgb(255, 254, 254) ;
+    border-radius: 20px;
+    margin: 10px;
+    padding: 10px;
+    width: 200px;
+}
+
+.character-image {
+    width: 150px;
+    margin: 10px;
+}
+
+div {
+    border: solid black 1px;
+    display: flex;
+    justify-content: center;
+    align-self: stretch;
+    margin: 10px;
+    width: 150px;
+    padding: 10px;
+}
+
+p {
+    font-size: .8em;
+}
+
+form {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+fieldset { 
+    color: white;
+    box-shadow: 10px 10px 10px lime;
+}
+
+section { 
+    margin: 10px;
+}
+#species-dropDown {
+    position: relative; 
+    font-size: 1.2em;
+    width: 190px;
+    padding: 10px;
+    background: #fff;
+    border-radius: 7px;
+    border: 1px solid rgba(0,0,0,0.15);
+    box-shadow: 0 1px 1px rgba(50,50,50,0.1);
+    cursor: pointer;
+    outline: none;
+    font-weight: bold;
+    color: #8AA8BD;
+}
